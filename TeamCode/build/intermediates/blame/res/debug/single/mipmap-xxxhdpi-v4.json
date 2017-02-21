@@ -1,6 +1,6 @@
 [
     {
-        "merged": "/home/robotics/Downloads/ftc_app-master/TeamCode/build/intermediates/res/merged/debug/mipmap-xxxhdpi-v4/ic_launcher.png",
-        "source": "/home/robotics/Downloads/ftc_app-master/TeamCode/build/intermediates/exploded-aar/ftc_app-master/FtcRobotController/unspecified/res/mipmap-xxxhdpi-v4/ic_launcher.png"
+        "merged": "C:\\Users\\Mark\\Documents\\8902-Robotics\\TeamCode\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi-v4\\ic_launcher.png",
+        "source": "C:\\Users\\Mark\\Documents\\8902-Robotics\\TeamCode\\build\\intermediates\\exploded-aar\\8902-Robotics\\FtcRobotController\\unspecified\\res\\mipmap-xxxhdpi-v4\\ic_launcher.png"
     }
 ]

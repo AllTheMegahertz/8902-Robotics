@@ -204,12 +204,12 @@ public class BlueBeacons extends LinearOpMode {
                 main.move(0, 0.1, motors);
             }
             else {
-                if (getRuntime() > 1) {
-                    main.move(2, 0.1, motors);
+                if (getRuntime() < 1) {
+                    main.move(2, 0.2, motors);
                     direction = 1;
                 }
                 else {
-                    main.move(3, 0.1, motors);
+                    main.move(3, 0.2, motors);
                     direction = 0;
                 }
             }

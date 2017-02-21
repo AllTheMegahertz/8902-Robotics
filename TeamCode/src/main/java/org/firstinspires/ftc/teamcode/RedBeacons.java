@@ -204,7 +204,7 @@ public class RedBeacons extends LinearOpMode {
                 main.move(0, 0.1, motors);
             }
             else {
-                if (getRuntime() > 1) {
+                if (getRuntime() < 1) {
                     main.move(3, 0.1, motors);
                     direction = 1;
                 }
