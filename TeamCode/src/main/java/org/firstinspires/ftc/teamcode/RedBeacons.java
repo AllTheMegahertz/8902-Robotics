@@ -37,9 +37,9 @@ public class RedBeacons extends LinearOpMode {
     private int direction;
 
     //Sensor vars
-    private double r;
-    private double g;
-    private double b;
+    private int r;
+    private int g;
+    private int b;
     private double distance;
 
     //Checks using the ODS for a wall
@@ -57,8 +57,8 @@ public class RedBeacons extends LinearOpMode {
     //Checks for the correct beacon color
     public boolean color() {
 
-        double r = colorSensor.red();
-        double b = colorSensor.blue();
+        int r = colorSensor.red();
+        int b = colorSensor.blue();
 
         if (r >= 3 && r > b) {
             return true;
@@ -72,9 +72,9 @@ public class RedBeacons extends LinearOpMode {
     //Checks if the color sensor returns nothing
     public boolean noColor() {
 
-        int r = colorSensor.red();
-        int g = colorSensor.green();
-        int b = colorSensor.blue();
+        r = colorSensor.red();
+        g = colorSensor.green();
+        b = colorSensor.blue();
 
         if (r + g + b == 0) {
             return true;
@@ -90,7 +90,7 @@ public class RedBeacons extends LinearOpMode {
 
         sensors();
 
-        if (pushed == false) {
+        if (!pushed) {
             pushed = true;
             resetStartTime();
         }
@@ -175,116 +175,116 @@ public class RedBeacons extends LinearOpMode {
         waitForStart();
 
         //Running Code
-        while (opModeIsActive()) {
 
-            //Acquires Sensor data
+        //Acquires Sensor data
+        sensors();
+
+        //Starts from starting position, finds wall
+        main.move(0, 1, motors);
+        sleep(1300);
+        main.turn(0, 1, motors);
+        sleep(475);
+        main.move(0, 1, motors);
+        sleep(450);
+        while (!wall()) {
+            sensors();
+            main.move(0, 0.1, motors);
+        }
+
+        resetStartTime();
+        //Wall found, moves left until beacon is found, and pushes if it is the right color
+
+        while (!color() && noColor()) {
             sensors();
 
-            //Starts from starting position, finds wall
-            main.move(0, 1, motors);
-            sleep(1300);
-            main.turn(0, 1, motors);
-            sleep(475);
-            main.move(0, 1, motors);
-            sleep(450);
-            while (!wall()) {
-                sensors();
+            if (color()) {
+                push();
+            }
+            else if (!wall()) {
                 main.move(0, 0.1, motors);
             }
+            else {
+                if (getRuntime() > 1) {
+                    main.move(3, 0.1, motors);
+                    direction = 1;
+                }
+                else {
+                    main.move(2, 0.1, motors);
+                    direction = 0;
+                }
+            }
+        }
 
-            resetStartTime();
-            //Wall found, moves left until beacon is found, and pushes if it is the right color
-
-            while (!color() && noColor()) {
+        //If the beacon hasn't been pushed, but the robot has found the beacon
+        if (!pushed) {
+            while (!color()) {
                 sensors();
 
                 if (color()) {
                     push();
                 }
-                else if (!wall()) {
-                    main.move(0, 0.1, motors);
+
+                //Continues moving in the direction that it was prior
+                if (direction == 0 && !pushed) {
+                    main.move(2, 0.1, motors);
                 }
-                else {
-                    if (getRuntime() > 1) {
-                        main.move(3, 0.1, motors);
-                        direction = 1;
-                    }
-                    else {
-                        main.move(2, 0.1, motors);
-                        direction = 0;
-                    }
+                if (direction == 1 && !pushed) {
+                    main.move(3, 0.1, motors);
                 }
+
             }
-
-            //If the beacon hasn't been pushed, but the robot has found the beacon
-            if (!pushed) {
-                while (!color()) {
-                    sensors();
-
-                    if (color()) {
-                        push();
-                    }
-
-                    //Continues moving in the direction that it was prior
-                    if (direction == 0 && !pushed) {
-                        main.move(2, 0.1, motors);
-                    }
-                    if (direction == 1 && !pushed) {
-                        main.move(3, 0.1, motors);
-                    }
-
-                }
-            }
-
-            //Resets, and prepares to push the next beacon
-            pushed = false;
-            main.move(3, 0.5, motors);
-            sleep(300);
-
-            //Moves to the right, staying the correct distance from the wall, and presses the beacon when it is in front of the correct color
-            goRightForBeacon();
-
-            //Turns the robot to go for the next two beacons
-            main.turn(1, 1, motors);
-            sleep(475);
-            main.turn(0, 0, motors);
-
-            //Makes sure 10 seconds have passed
-            while (getRuntime() <= 7.5) {
-                return;
-            }
-
-            //Stores current time to know how long the robot must travel to come back
-            double time = getRuntime();
-
-            //Ready to continue. Goes for first beacon on the right.
-            goRightForBeacon();
-
-            //Goes for second beacon on the right
-            goRightForBeacon();
-
-            double time2 = (getRuntime() - time) * 100;
-
-            long timeL = (long) time2;
-
-            //Comes back to where robot was before previous two beacons
-            main.move(2, 1, motors);
-            sleep(timeL);
-
-            //Moves back to near the first beacon
-            main.move(1, 1, motors);
-            sleep((long) (time2*0.75));
-
-            //Move in front of the center goal
-            main.move(3, 1, motors);
-            sleep((long) (time2/2));
-
-            //Move the ball and park on the goal
-            main.move(0, 1, motors);
-            sleep(100);
-            main.move(0, 0, motors);
-
         }
+
+        //Resets, and prepares to push the next beacon
+        pushed = false;
+        main.move(3, 0.5, motors);
+        sleep(300);
+
+        //Moves to the right, staying the correct distance from the wall, and presses the beacon when it is in front of the correct color
+        goRightForBeacon();
+        pushed = false;
+
+        //Turns the robot to go for the next two beacons
+        main.turn(1, 1, motors);
+        sleep(475);
+        main.turn(0, 0, motors);
+
+        //Makes sure 10 seconds have passed
+        while (getRuntime() <= 7.5) {
+            return;
+        }
+
+        //Stores current time to know how long the robot must travel to come back
+        double time = getRuntime();
+
+        //Ready to continue. Goes for first beacon on the right.
+        goRightForBeacon();
+        pushed = false;
+
+        //Goes for second beacon on the right
+        goRightForBeacon();
+
+        double time2 = (getRuntime() - time) * 100;
+
+        long timeL = (long) time2;
+
+        //Comes back to where robot was before previous two beacons
+        main.move(2, 1, motors);
+        sleep(timeL);
+
+        //Moves back to near the first beacon
+        main.move(1, 1, motors);
+        sleep((long) (time2*0.75));
+
+        //Move in front of the center goal
+        main.move(3, 1, motors);
+        sleep((long) (time2/2));
+
+        //Move the ball and park on the goal
+        main.move(0, 1, motors);
+        sleep(500);
+        main.move(0, 0, motors);
+
     }
 
 }
