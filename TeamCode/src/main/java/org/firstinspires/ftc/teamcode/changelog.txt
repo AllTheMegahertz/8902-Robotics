@@ -1,0 +1,12 @@
+Mark Vadeika - 01/03/2017
+Teleop:
+Added support for horizontal Motion
+Added check to prevent robot from stalling out when the horizontal sticks are not faced in the same direction
+
+Mark Vadeika - 01/08/2017
+Teleop:
+Added deadzone, ignoring any input below magnitude 0.1
+Autonomous:
+Created it
+Added 10 second timer before start
+Fixed issue in which the motors would not start because the timer started when the robot intialized
