@@ -35,6 +35,7 @@ public class BlueBeacons extends LinearOpMode {
     //Variables
     private boolean pushed = false;
     private int direction;
+    private double runningTime = 0;
 
     //Sensor vars
     private int r;
@@ -85,6 +86,11 @@ public class BlueBeacons extends LinearOpMode {
 
     }
 
+    public void resetTime() {
+        runningTime += getRuntime();
+        resetStartTime();
+    }
+
     //Pushes beacon
     public void push() {
 
@@ -92,8 +98,12 @@ public class BlueBeacons extends LinearOpMode {
 
         if (!pushed) {
             pushed = true;
-            resetStartTime();
+            resetTime();
         }
+
+        //Gets sensors out of the way
+        odsServo.setPosition(0.5);
+        colorServo.setPosition(0.5);
 
         //Moves forward for 0.5 seconds
         main.move(0, 0.1, motors);
@@ -110,6 +120,11 @@ public class BlueBeacons extends LinearOpMode {
             sensors();
             main.move(0, 0.1, motors);
         }
+
+        //Restores servos
+        odsServo.setPosition(1.0);
+        colorServo.setPosition(1.0);
+
         sleep(100);
         main.move(0, 0, motors);
 
@@ -128,7 +143,7 @@ public class BlueBeacons extends LinearOpMode {
 
     public void goLeftForBeacon() {
 
-        while (!color() && noColor()) {
+        while (!color()) {
             sensors();
 
             if (color()) {
@@ -167,11 +182,11 @@ public class BlueBeacons extends LinearOpMode {
         //Turns off color sensor light
         colorSensor.enableLed(false);
 
-        //Makes sure the sensors are in the right spot
-        colorServo.setPosition(1.0);
-        odsServo.setPosition(1.0);
+        //Makes sure the sensors are retracted
+        colorServo.setPosition(0.5);
+        odsServo.setPosition(0.5);
 
-        resetStartTime();
+        resetTime();
         waitForStart();
 
         //Running Code
@@ -186,12 +201,18 @@ public class BlueBeacons extends LinearOpMode {
         sleep(475);
         main.move(0, 1, motors);
         sleep(450);
+        //Extends ODS
+        odsServo.setPosition(1.0);
+
         while (!wall()) {
             sensors();
             main.move(0, 0.1, motors);
         }
 
-        resetStartTime();
+        //Extends color sensor
+        colorServo.setPosition(1.0);
+
+        resetTime();
         //Wall found, moves left until beacon is found, and pushes if it is the right color
 
         while (!color() && noColor()) {
@@ -205,12 +226,12 @@ public class BlueBeacons extends LinearOpMode {
             }
             else {
                 if (getRuntime() < 1) {
-                    main.move(2, 0.2, motors);
-                    direction = 1;
+                    main.move(2, 0.1, motors);
+                    direction = 0;
                 }
                 else {
-                    main.move(3, 0.2, motors);
-                    direction = 0;
+                    main.move(3, 0.1, motors);
+                    direction = 1;
                 }
             }
         }
@@ -226,10 +247,10 @@ public class BlueBeacons extends LinearOpMode {
 
                 //Continues moving in the direction that it was prior
                 if (direction == 0 && !pushed) {
-                    main.move(3, 0.1, motors);
+                    main.move(2, 0.1, motors);
                 }
                 if (direction == 1 && !pushed) {
-                    main.move(2, 0.1, motors);
+                    main.move(3, 0.1, motors);
                 }
 
             }
@@ -240,7 +261,7 @@ public class BlueBeacons extends LinearOpMode {
         main.move(2, 0.5, motors);
         sleep(300);
 
-        //Moves to the right, staying the correct distance from the wall, and presses the beacon when it is in front of the correct color
+        //Moves to the left, staying the correct distance from the wall, and presses the beacon when it is in front of the correct color
         goLeftForBeacon();
         pushed = false;
 
@@ -250,7 +271,7 @@ public class BlueBeacons extends LinearOpMode {
         main.turn(0, 0, motors);
 
         //Makes sure 10 seconds have passed
-        while (getRuntime() <= 7.5) {
+        while (getRuntime() + runningTime <= 10) {
             return;
         }
 
@@ -281,6 +302,8 @@ public class BlueBeacons extends LinearOpMode {
         sleep((long) (time2/2));
 
         //Move the ball and park on the goal
+        odsServo.setPosition(0.5);
+        colorServo.setPosition(0.5);
         main.move(0, 1, motors);
         sleep(500);
         main.move(0, 0, motors);
