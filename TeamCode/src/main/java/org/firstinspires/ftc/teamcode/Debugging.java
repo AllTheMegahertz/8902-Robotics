@@ -27,7 +27,7 @@ public class Debugging extends OpMode {
     private OpticalDistanceSensor ods;
     private Servo servo;
 
-    private boolean forward;
+    private boolean forward = true;
 
     private ArrayList<DcMotor> motors = new ArrayList<>();
 
