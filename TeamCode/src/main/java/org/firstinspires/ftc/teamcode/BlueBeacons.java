@@ -44,55 +44,40 @@ public class BlueBeacons extends LinearOpMode {
     private double distance;
 
     //Checks using the ODS for a wall
-    public boolean wall() {
+    private boolean wall() {
 
-        if (ods.getLightDetected() >= 0.05) {
-            return true;
-        }
-        else {
-            return false;
-        }
+        return ods.getLightDetected() >= 0.05;
 
     }
 
     //Checks for the correct beacon color
-    public boolean color() {
+    private boolean color() {
 
         int r = colorSensor.red();
         int b = colorSensor.blue();
 
-        if (b >= 2 && b > r) {
-            return true;
-        }
-        else {
-            return false;
-        }
+        return b >= 2 && b > r;
 
     }
 
     //Checks if the color sensor returns nothing
-    public boolean noColor() {
+    private boolean noColor() {
 
         r = colorSensor.red();
         g = colorSensor.green();
         b = colorSensor.blue();
 
-        if (r + g + b == 0) {
-            return true;
-        }
-        else {
-            return false;
-        }
+        return r + g + b == 0;
 
     }
 
-    public void resetTime() {
+    private void resetTime() {
         runningTime += getRuntime();
         resetStartTime();
     }
 
     //Pushes beacon
-    public void push() {
+    private void push() {
 
         sensors();
 
@@ -132,7 +117,7 @@ public class BlueBeacons extends LinearOpMode {
     }
 
     //Acquires Sensor data
-    public void sensors() {
+    private void sensors() {
 
         distance = ods.getLightDetected();
         r = colorSensor.red();
@@ -141,7 +126,7 @@ public class BlueBeacons extends LinearOpMode {
 
     }
 
-    public void goLeftForBeacon() {
+    private void goLeftForBeacon() {
 
         while (!color()) {
             sensors();
@@ -271,9 +256,7 @@ public class BlueBeacons extends LinearOpMode {
         main.turn(0, 0, motors);
 
         //Makes sure 10 seconds have passed
-        while (getRuntime() + runningTime <= 10) {
-            return;
-        }
+        while (getRuntime() + runningTime <= 10);
 
         //Stores current time to know how long the robot must travel to come back
         double time = getRuntime();

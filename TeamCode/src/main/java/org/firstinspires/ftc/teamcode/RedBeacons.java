@@ -2,16 +2,11 @@ package org.firstinspires.ftc.teamcode;
 
 import com.qualcomm.robotcore.eventloop.opmode.Autonomous;
 import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
-import com.qualcomm.robotcore.eventloop.opmode.OpMode;
 import com.qualcomm.robotcore.hardware.ColorSensor;
 import com.qualcomm.robotcore.hardware.DcMotor;
 import com.qualcomm.robotcore.hardware.OpticalDistanceSensor;
 import com.qualcomm.robotcore.hardware.Servo;
-import com.qualcomm.robotcore.util.ElapsedTime;
 
-import org.firstinspires.ftc.teamcode.main;
-
-import java.lang.reflect.Method;
 import java.util.ArrayList;
 
 /**
@@ -44,55 +39,40 @@ public class RedBeacons extends LinearOpMode {
     private double distance;
 
     //Checks using the ODS for a wall
-    public boolean wall() {
+    private boolean wall() {
 
-        if (ods.getLightDetected() >= 0.05) {
-            return true;
-        }
-        else {
-            return false;
-        }
+        return ods.getLightDetected() >= 0.05;
 
     }
 
     //Checks for the correct beacon color
-    public boolean color() {
+    private boolean color() {
 
         int r = colorSensor.red();
         int b = colorSensor.blue();
 
-        if (r >= 3 && r > b) {
-            return true;
-        }
-        else {
-            return false;
-        }
+        return r >= 3 && r > b;
 
     }
 
     //Checks if the color sensor returns nothing
-    public boolean noColor() {
+    private boolean noColor() {
 
         r = colorSensor.red();
         g = colorSensor.green();
         b = colorSensor.blue();
 
-        if (r + g + b == 0) {
-            return true;
-        }
-        else {
-            return false;
-        }
+        return r + g + b == 0;
 
     }
 
-    public void resetTime() {
+    private void resetTime() {
         runningTime += getRuntime();
         resetStartTime();
     }
 
     //Pushes beacon
-    public void push() {
+    private void push() {
 
         sensors();
 
@@ -132,7 +112,7 @@ public class RedBeacons extends LinearOpMode {
     }
 
     //Acquires Sensor data
-    public void sensors() {
+    private void sensors() {
 
         distance = ods.getLightDetected();
         r = colorSensor.red();
@@ -141,7 +121,7 @@ public class RedBeacons extends LinearOpMode {
 
     }
 
-    public void goRightForBeacon() {
+    private void goRightForBeacon() {
 
         while (!color()) {
             sensors();
@@ -271,9 +251,7 @@ public class RedBeacons extends LinearOpMode {
         main.turn(0, 0, motors);
 
         //Makes sure 10 seconds have passed
-        while (getRuntime() + runningTime <= 10) {
-            return;
-        }
+        while (getRuntime() + runningTime <= 10);
 
         //Stores current time to know how long the robot must travel to come back
         double time = getRuntime();
