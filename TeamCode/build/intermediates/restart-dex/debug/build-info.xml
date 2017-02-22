@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<instant-run
+    abi="armeabi-v7a,armeabi"
+    api-level="19"
+    density="hdpi"
+    format="8"
+    plugin-version="2.2.3"
+    timestamp="173765902595274"
+    token="1238511509006797697"
+    verifier="COMPATIBLE" >
+
+    <task
+        name="javac"
+        duration="163" />
+    <task
+        name="instant-run-dex"
+        duration="850" />
+    <task
+        name="instant-run-transform"
+        duration="59" />
+    <task
+        name="verifier"
+        duration="12" />
+
+    <artifact
+        location="/home/robotics/Documents/8902-Robotics-testing/TeamCode/build/intermediates/reload-dex/debug/classes.dex"
+        type="RELOAD_DEX" />
+
+    <build
+        timestamp="173731060538365"
+        verifier="FULL_BUILD_REQUESTED" >
+        <artifact
+            location="/home/robotics/Documents/8902-Robotics-testing/TeamCode/build/outputs/apk/TeamCode-debug.apk"
+            type="MAIN" />
+    </build>
+    <build
+        timestamp="173765902595274"
+        verifier="COMPATIBLE" >
+        <artifact
+            location="/home/robotics/Documents/8902-Robotics-testing/TeamCode/build/intermediates/reload-dex/debug/classes.dex"
+            type="RELOAD_DEX" />
+    </build>
+
+</instant-run>
