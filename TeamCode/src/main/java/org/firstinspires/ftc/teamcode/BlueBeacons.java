@@ -46,7 +46,7 @@ public class BlueBeacons extends LinearOpMode {
     //Checks using the ODS for a wall
     private boolean wall() {
 
-        return ods.getLightDetected() >= 0.05;
+        return ods.getLightDetected() >= 0.005;
 
     }
 
@@ -123,6 +123,11 @@ public class BlueBeacons extends LinearOpMode {
         r = colorSensor.red();
         g = colorSensor.green();
         b = colorSensor.blue();
+
+        telemetry.addData("distance", distance);
+        telemetry.addData("Red", r);
+        telemetry.addData("Green", g);
+        telemetry.addData("Blue", b);
 
     }
 

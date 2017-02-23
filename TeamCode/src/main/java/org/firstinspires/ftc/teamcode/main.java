@@ -42,7 +42,7 @@ public class main {
         }
 
         //Goes Right
-        if (d == 3) {
+        else if (d == 3) {
             d = -1;
 
             m.get(0).setPower(p*d);
@@ -52,10 +52,13 @@ public class main {
 
         }
 
-        m.get(0).setPower(-p*d);
-        m.get(1).setPower(p*d);
-        m.get(2).setPower(-p*d);
-        m.get(3).setPower(p*d);
+        else {
+
+            m.get(0).setPower(-p * d);
+            m.get(1).setPower(p * d);
+            m.get(2).setPower(-p * d);
+            m.get(3).setPower(p * d);
+        }
 
     }
 

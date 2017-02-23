@@ -1,10 +1,18 @@
 [
     {
-        "merged": "C:\\Users\\Mark\\Documents\\8902-Robotics\\TeamCode\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\ic_launcher.png",
-        "source": "C:\\Users\\Mark\\Documents\\8902-Robotics\\TeamCode\\build\\intermediates\\exploded-aar\\8902-Robotics\\FtcRobotController\\unspecified\\res\\drawable-hdpi-v4\\ic_launcher.png"
+        "merged": "/home/robotics/Documents/robotics/C:\\Users\\Mark\\Documents\\8902-Robotics\\TeamCode\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\ic_launcher.png",
+        "source": "/home/robotics/Documents/robotics/C:\\Users\\Mark\\Documents\\8902-Robotics\\TeamCode\\build\\intermediates\\exploded-aar\\8902-Robotics\\FtcRobotController\\unspecified\\res\\drawable-hdpi-v4\\ic_launcher.png"
     },
     {
-        "merged": "C:\\Users\\Mark\\Documents\\8902-Robotics\\TeamCode\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\button_shape.xml",
-        "source": "C:\\Users\\Mark\\Documents\\8902-Robotics\\TeamCode\\build\\intermediates\\exploded-aar\\FtcCommon-release\\res\\drawable-hdpi-v4\\button_shape.xml"
+        "merged": "/home/robotics/Documents/robotics/C:\\Users\\Mark\\Documents\\8902-Robotics\\TeamCode\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\button_shape.xml",
+        "source": "/home/robotics/Documents/robotics/C:\\Users\\Mark\\Documents\\8902-Robotics\\TeamCode\\build\\intermediates\\exploded-aar\\FtcCommon-release\\res\\drawable-hdpi-v4\\button_shape.xml"
+    },
+    {
+        "merged": "/home/robotics/Documents/robotics/TeamCode/build/intermediates/res/merged/debug/drawable-hdpi-v4/ic_launcher.png",
+        "source": "/home/robotics/Documents/robotics/TeamCode/build/intermediates/exploded-aar/robotics/FtcRobotController/unspecified/res/drawable-hdpi-v4/ic_launcher.png"
+    },
+    {
+        "merged": "/home/robotics/Documents/robotics/TeamCode/build/intermediates/res/merged/debug/drawable-hdpi-v4/button_shape.xml",
+        "source": "/home/robotics/Documents/robotics/TeamCode/build/intermediates/exploded-aar/FtcCommon-release/res/drawable-hdpi-v4/button_shape.xml"
     }
 ]

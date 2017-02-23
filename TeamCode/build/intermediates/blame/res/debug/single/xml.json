@@ -1,30 +1,58 @@
 [
     {
-        "merged": "C:\\Users\\Mark\\Documents\\8902-Robotics\\TeamCode\\build\\intermediates\\res\\merged\\debug\\xml\\pushbotsens.xml",
-        "source": "C:\\Users\\Mark\\Documents\\8902-Robotics\\TeamCode\\build\\intermediates\\exploded-aar\\FtcCommon-release\\res\\xml\\pushbotsens.xml"
+        "merged": "/home/robotics/Documents/robotics/C:\\Users\\Mark\\Documents\\8902-Robotics\\TeamCode\\build\\intermediates\\res\\merged\\debug\\xml\\pushbotsens.xml",
+        "source": "/home/robotics/Documents/robotics/C:\\Users\\Mark\\Documents\\8902-Robotics\\TeamCode\\build\\intermediates\\exploded-aar\\FtcCommon-release\\res\\xml\\pushbotsens.xml"
     },
     {
-        "merged": "C:\\Users\\Mark\\Documents\\8902-Robotics\\TeamCode\\build\\intermediates\\res\\merged\\debug\\xml\\preferences.xml",
-        "source": "C:\\Users\\Mark\\Documents\\8902-Robotics\\TeamCode\\build\\intermediates\\exploded-aar\\8902-Robotics\\FtcRobotController\\unspecified\\res\\xml\\preferences.xml"
+        "merged": "/home/robotics/Documents/robotics/C:\\Users\\Mark\\Documents\\8902-Robotics\\TeamCode\\build\\intermediates\\res\\merged\\debug\\xml\\preferences.xml",
+        "source": "/home/robotics/Documents/robotics/C:\\Users\\Mark\\Documents\\8902-Robotics\\TeamCode\\build\\intermediates\\exploded-aar\\8902-Robotics\\FtcRobotController\\unspecified\\res\\xml\\preferences.xml"
     },
     {
-        "merged": "C:\\Users\\Mark\\Documents\\8902-Robotics\\TeamCode\\build\\intermediates\\res\\merged\\debug\\xml\\pushbot.xml",
-        "source": "C:\\Users\\Mark\\Documents\\8902-Robotics\\TeamCode\\build\\intermediates\\exploded-aar\\FtcCommon-release\\res\\xml\\pushbot.xml"
+        "merged": "/home/robotics/Documents/robotics/C:\\Users\\Mark\\Documents\\8902-Robotics\\TeamCode\\build\\intermediates\\res\\merged\\debug\\xml\\pushbot.xml",
+        "source": "/home/robotics/Documents/robotics/C:\\Users\\Mark\\Documents\\8902-Robotics\\TeamCode\\build\\intermediates\\exploded-aar\\FtcCommon-release\\res\\xml\\pushbot.xml"
     },
     {
-        "merged": "C:\\Users\\Mark\\Documents\\8902-Robotics\\TeamCode\\build\\intermediates\\res\\merged\\debug\\xml\\k9usbbot.xml",
-        "source": "C:\\Users\\Mark\\Documents\\8902-Robotics\\TeamCode\\build\\intermediates\\exploded-aar\\FtcCommon-release\\res\\xml\\k9usbbot.xml"
+        "merged": "/home/robotics/Documents/robotics/C:\\Users\\Mark\\Documents\\8902-Robotics\\TeamCode\\build\\intermediates\\res\\merged\\debug\\xml\\k9usbbot.xml",
+        "source": "/home/robotics/Documents/robotics/C:\\Users\\Mark\\Documents\\8902-Robotics\\TeamCode\\build\\intermediates\\exploded-aar\\FtcCommon-release\\res\\xml\\k9usbbot.xml"
     },
     {
-        "merged": "C:\\Users\\Mark\\Documents\\8902-Robotics\\TeamCode\\build\\intermediates\\res\\merged\\debug\\xml\\device_filter.xml",
-        "source": "C:\\Users\\Mark\\Documents\\8902-Robotics\\TeamCode\\build\\intermediates\\exploded-aar\\8902-Robotics\\FtcRobotController\\unspecified\\res\\xml\\device_filter.xml"
+        "merged": "/home/robotics/Documents/robotics/TeamCode/build/intermediates/res/merged/debug/xml/pushbotsens.xml",
+        "source": "/home/robotics/Documents/robotics/TeamCode/build/intermediates/exploded-aar/FtcCommon-release/res/xml/pushbotsens.xml"
     },
     {
-        "merged": "C:\\Users\\Mark\\Documents\\8902-Robotics\\TeamCode\\build\\intermediates\\res\\merged\\debug\\xml\\squarebot.xml",
-        "source": "C:\\Users\\Mark\\Documents\\8902-Robotics\\TeamCode\\build\\intermediates\\exploded-aar\\FtcCommon-release\\res\\xml\\squarebot.xml"
+        "merged": "/home/robotics/Documents/robotics/C:\\Users\\Mark\\Documents\\8902-Robotics\\TeamCode\\build\\intermediates\\res\\merged\\debug\\xml\\device_filter.xml",
+        "source": "/home/robotics/Documents/robotics/C:\\Users\\Mark\\Documents\\8902-Robotics\\TeamCode\\build\\intermediates\\exploded-aar\\8902-Robotics\\FtcRobotController\\unspecified\\res\\xml\\device_filter.xml"
     },
     {
-        "merged": "C:\\Users\\Mark\\Documents\\8902-Robotics\\TeamCode\\build\\intermediates\\res\\merged\\debug\\xml\\k9legacybot.xml",
-        "source": "C:\\Users\\Mark\\Documents\\8902-Robotics\\TeamCode\\build\\intermediates\\exploded-aar\\FtcCommon-release\\res\\xml\\k9legacybot.xml"
+        "merged": "/home/robotics/Documents/robotics/C:\\Users\\Mark\\Documents\\8902-Robotics\\TeamCode\\build\\intermediates\\res\\merged\\debug\\xml\\squarebot.xml",
+        "source": "/home/robotics/Documents/robotics/C:\\Users\\Mark\\Documents\\8902-Robotics\\TeamCode\\build\\intermediates\\exploded-aar\\FtcCommon-release\\res\\xml\\squarebot.xml"
+    },
+    {
+        "merged": "/home/robotics/Documents/robotics/TeamCode/build/intermediates/res/merged/debug/xml/pushbot.xml",
+        "source": "/home/robotics/Documents/robotics/TeamCode/build/intermediates/exploded-aar/FtcCommon-release/res/xml/pushbot.xml"
+    },
+    {
+        "merged": "/home/robotics/Documents/robotics/TeamCode/build/intermediates/res/merged/debug/xml/device_filter.xml",
+        "source": "/home/robotics/Documents/robotics/TeamCode/build/intermediates/exploded-aar/robotics/FtcRobotController/unspecified/res/xml/device_filter.xml"
+    },
+    {
+        "merged": "/home/robotics/Documents/robotics/TeamCode/build/intermediates/res/merged/debug/xml/squarebot.xml",
+        "source": "/home/robotics/Documents/robotics/TeamCode/build/intermediates/exploded-aar/FtcCommon-release/res/xml/squarebot.xml"
+    },
+    {
+        "merged": "/home/robotics/Documents/robotics/TeamCode/build/intermediates/res/merged/debug/xml/k9usbbot.xml",
+        "source": "/home/robotics/Documents/robotics/TeamCode/build/intermediates/exploded-aar/FtcCommon-release/res/xml/k9usbbot.xml"
+    },
+    {
+        "merged": "/home/robotics/Documents/robotics/TeamCode/build/intermediates/res/merged/debug/xml/k9legacybot.xml",
+        "source": "/home/robotics/Documents/robotics/TeamCode/build/intermediates/exploded-aar/FtcCommon-release/res/xml/k9legacybot.xml"
+    },
+    {
+        "merged": "/home/robotics/Documents/robotics/TeamCode/build/intermediates/res/merged/debug/xml/preferences.xml",
+        "source": "/home/robotics/Documents/robotics/TeamCode/build/intermediates/exploded-aar/robotics/FtcRobotController/unspecified/res/xml/preferences.xml"
+    },
+    {
+        "merged": "/home/robotics/Documents/robotics/C:\\Users\\Mark\\Documents\\8902-Robotics\\TeamCode\\build\\intermediates\\res\\merged\\debug\\xml\\k9legacybot.xml",
+        "source": "/home/robotics/Documents/robotics/C:\\Users\\Mark\\Documents\\8902-Robotics\\TeamCode\\build\\intermediates\\exploded-aar\\FtcCommon-release\\res\\xml\\k9legacybot.xml"
     }
 ]

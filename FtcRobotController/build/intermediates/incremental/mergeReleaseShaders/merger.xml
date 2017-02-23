@@ -1,2 +1,2 @@
 <?xml version="1.0" encoding="utf-8"?>
-<merger version="3"><dataSet config="main"><source path="C:\Users\Mark\Documents\8902-Robotics\FtcRobotController\src\main\shaders"/></dataSet><dataSet config="release"><source path="C:\Users\Mark\Documents\8902-Robotics\FtcRobotController\src\release\shaders"/></dataSet></merger>
+<merger version="3"><dataSet config="main"><source path="/home/robotics/Documents/robotics/FtcRobotController/src/main/shaders"/></dataSet><dataSet config="release"><source path="/home/robotics/Documents/robotics/FtcRobotController/src/release/shaders"/></dataSet></merger>

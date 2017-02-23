@@ -12,12 +12,57 @@
     </item>
     <item
         is-multidex="false"
+        jar="/home/robotics/Documents/robotics/TeamCode/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="0b6384c608d140d137a31200a080546c3cc9cea7">
+        <dex dex="/home/robotics/Documents/robotics/TeamCode/build/intermediates/pre-dexed/debug/instant-run-bootstrap_4cd85a5241f25aa70d7055e8542deaba81b27550.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/robotics/Documents/robotics/TeamCode/build/intermediates/exploded-aar/FtcCommon-release/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="2204deca0490727b9009dba5cdb2ec515cdbcc63">
+        <dex dex="/home/robotics/Documents/robotics/TeamCode/build/intermediates/pre-dexed/debug/intermediates-exploded-aar-FtcCommon-release_29597101f8c2dd3257bbb5962366f817b8c63c6d.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/robotics/Documents/robotics/TeamCode/build/intermediates/exploded-aar/Inspection-release/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="b3051d2a26a36e5b402fd8aa14ec8a4bea328974">
+        <dex dex="/home/robotics/Documents/robotics/TeamCode/build/intermediates/pre-dexed/debug/intermediates-exploded-aar-Inspection-release_a76a76f8de654726d95b2cb9a6c5c7cf87b4ea01.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/robotics/Documents/robotics/TeamCode/build/intermediates/exploded-aar/RobotCore-release/jars/libs/Vuforia.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="f1dde8a0e6ed1172450c657386da45fd1d7565f4">
+        <dex dex="/home/robotics/Documents/robotics/TeamCode/build/intermediates/pre-dexed/debug/Vuforia_6ef138ac9db0e4e755effefd3f6b429ff92fd86a.jar" />
+    </item>
+    <item
+        is-multidex="false"
         jar="/home/robotics/Downloads/ftc_app-master/TeamCode/build/intermediates/exploded-aar/RobotCore-release/jars/libs/d2xx.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.0"
         sha1="84a174a0d6bebc32bf1e7cd4139224f0b05df829">
         <dex dex="/home/robotics/Downloads/ftc_app-master/TeamCode/build/intermediates/pre-dexed/debug/d2xx_83b6dd9059d1ae2b68d411540e30757647d3d321.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/robotics/Documents/robotics/TeamCode/build/intermediates/exploded-aar/RobotCore-release/jars/libs/d2xx.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="84a174a0d6bebc32bf1e7cd4139224f0b05df829">
+        <dex dex="/home/robotics/Documents/robotics/TeamCode/build/intermediates/pre-dexed/debug/d2xx_3414cac7f42876d6888553b04513b3dfec85719e.jar" />
     </item>
     <item
         is-multidex="false"
@@ -39,6 +84,24 @@
     </item>
     <item
         is-multidex="false"
+        jar="/home/robotics/Documents/robotics/TeamCode/build/intermediates/exploded-aar/Analytics-release/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="9dafed45e330aec14abcce05bdb7bbdb2a2d7092">
+        <dex dex="/home/robotics/Documents/robotics/TeamCode/build/intermediates/pre-dexed/debug/intermediates-exploded-aar-Analytics-release_1662a7a5a0f23221b9c200391068125707ee57f1.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/robotics/Documents/robotics/TeamCode/build/intermediates/exploded-aar/RobotCore-release/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="dc4ad03580e3f29564476f06b65f06d89704c0a9">
+        <dex dex="/home/robotics/Documents/robotics/TeamCode/build/intermediates/pre-dexed/debug/intermediates-exploded-aar-RobotCore-release_810dc0df66b3020d19e2e97c77c9349e5296267e.jar" />
+    </item>
+    <item
+        is-multidex="false"
         jar="/home/robotics/Downloads/ftc_app-master/TeamCode/build/intermediates/exploded-aar/WirelessP2p-release/jars/classes.jar"
         jumboMode="true"
         optimize="true"
@@ -54,6 +117,15 @@
         revision="25.0.0"
         sha1="2204deca0490727b9009dba5cdb2ec515cdbcc63">
         <dex dex="/home/robotics/Downloads/ftc_app-master/TeamCode/build/intermediates/pre-dexed/debug/intermediates-exploded-aar-FtcCommon-release_61e1d034c6637bd9550ae8c21808bb95ab1c5820.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/robotics/Documents/robotics/TeamCode/build/intermediates/exploded-aar/Hardware-release/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="d30a44d837c8f25360e4190341f43399eea81172">
+        <dex dex="/home/robotics/Documents/robotics/TeamCode/build/intermediates/pre-dexed/debug/intermediates-exploded-aar-Hardware-release_513d902cac81910a2f2ac5908b3d5acd8b828f29.jar" />
     </item>
     <item
         is-multidex="false"
@@ -102,6 +174,15 @@
     </item>
     <item
         is-multidex="false"
+        jar="/home/robotics/Documents/robotics/TeamCode/build/intermediates/exploded-aar/RobotCore-release/jars/libs/gson-2.7.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="d3fb718ef307cfff9ad988d06b98eadc292d1a34">
+        <dex dex="/home/robotics/Documents/robotics/TeamCode/build/intermediates/pre-dexed/debug/gson-2.7_ad494a435e2fc9b72d3ee117f03d1a7e49a28377.jar" />
+    </item>
+    <item
+        is-multidex="false"
         jar="/home/robotics/Downloads/ftc_app-master/TeamCode/build/intermediates/exploded-aar/RobotCore-release/jars/libs/gson-2.7.jar"
         jumboMode="true"
         optimize="true"
@@ -120,12 +201,57 @@
     </item>
     <item
         is-multidex="false"
+        jar="/home/robotics/Documents/robotics/TeamCode/build/intermediates/exploded-aar/WirelessP2p-release/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="9403be210676ed196cdcc64c7391b9ae2361c174">
+        <dex dex="/home/robotics/Documents/robotics/TeamCode/build/intermediates/pre-dexed/debug/intermediates-exploded-aar-WirelessP2p-release_8d21e69112a1e1b83585e9e9f3b37f709a75cba1.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/robotics/Documents/robotics/TeamCode/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="b1bdb07373fb048581f723553768344c28b54f05">
+        <dex dex="/home/robotics/Documents/robotics/TeamCode/build/intermediates/pre-dexed/debug/instant-run_4d154fefb77d8d2dff86407e7edc8de41b6911c0.jar" />
+    </item>
+    <item
+        is-multidex="false"
         jar="/home/robotics/Downloads/ftc_app-master/TeamCode/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.0"
         sha1="af454f1011d11747ee32e287e1045890d66ddc74">
         <dex dex="/home/robotics/Downloads/ftc_app-master/TeamCode/build/intermediates/pre-dexed/debug/instant-run_792328588a160f32d37ed574b9b50cf2d30c1364.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/robotics/Documents/robotics/TeamCode/build/intermediates/exploded-aar/Blocks-release/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="442e93c10918df3270cc37f9fcf9e90c43072eea">
+        <dex dex="/home/robotics/Documents/robotics/TeamCode/build/intermediates/pre-dexed/debug/intermediates-exploded-aar-Blocks-release_431a0ef3c511d928aaf4f34b75379226aba92bd5.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/robotics/Documents/robotics/TeamCode/build/intermediates/exploded-aar/ModernRobotics-release/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="01999c87afe3d10ffa06f3efa66f39e61e6aba0c">
+        <dex dex="/home/robotics/Documents/robotics/TeamCode/build/intermediates/pre-dexed/debug/intermediates-exploded-aar-ModernRobotics-release_fd07f7cc1eebc254722cd5b70644943b9d3d128f.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/robotics/Documents/robotics/TeamCode/build/intermediates/exploded-aar/RobotCore-release/jars/libs/support-annotations-23.4.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="5a051fb9930d4b0df111f4e71ba2c97136f8d1f7">
+        <dex dex="/home/robotics/Documents/robotics/TeamCode/build/intermediates/pre-dexed/debug/support-annotations-23.4.0_31aca2b038554b6f63731ea5ab8e598cecdda700.jar" />
     </item>
 
 </items>

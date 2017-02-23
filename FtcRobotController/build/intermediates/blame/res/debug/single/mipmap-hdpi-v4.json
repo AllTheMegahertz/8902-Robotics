@@ -1,6 +1,10 @@
 [
     {
-        "merged": "C:\\Users\\Mark\\Documents\\8902-Robotics\\FtcRobotController\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v4\\ic_launcher.png",
-        "source": "C:\\Users\\Mark\\Documents\\8902-Robotics\\FtcRobotController\\src\\main\\res\\mipmap-hdpi\\ic_launcher.png"
+        "merged": "/home/robotics/Documents/robotics/C:\\Users\\Mark\\Documents\\8902-Robotics\\FtcRobotController\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v4\\ic_launcher.png",
+        "source": "/home/robotics/Documents/robotics/C:\\Users\\Mark\\Documents\\8902-Robotics\\FtcRobotController\\src\\main\\res\\mipmap-hdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "/home/robotics/Documents/robotics/FtcRobotController/build/intermediates/res/merged/debug/mipmap-hdpi-v4/ic_launcher.png",
+        "source": "/home/robotics/Documents/robotics/FtcRobotController/src/main/res/mipmap-hdpi/ic_launcher.png"
     }
 ]

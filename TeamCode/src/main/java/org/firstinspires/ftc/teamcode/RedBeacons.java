@@ -41,7 +41,7 @@ public class RedBeacons extends LinearOpMode {
     //Checks using the ODS for a wall
     private boolean wall() {
 
-        return ods.getLightDetected() >= 0.05;
+        return ods.getLightDetected() >= 0.005;
 
     }
 
@@ -82,8 +82,8 @@ public class RedBeacons extends LinearOpMode {
         }
 
         //Gets sensors out of the way
-        odsServo.setPosition(0.5);
-        colorServo.setPosition(0.5);
+        odsServo.setPosition(1);
+        colorServo.setPosition(1);
 
         //Moves forward for 0.5 seconds
         main.move(0, 0.1, motors);
@@ -102,8 +102,8 @@ public class RedBeacons extends LinearOpMode {
         }
 
         //Restores servos
-        odsServo.setPosition(1.0);
-        colorServo.setPosition(1.0);
+        odsServo.setPosition(0.5);
+        colorServo.setPosition(0.0);
 
         sleep(100);
         main.move(0, 0, motors);
@@ -119,9 +119,14 @@ public class RedBeacons extends LinearOpMode {
         g = colorSensor.green();
         b = colorSensor.blue();
 
+        telemetry.addData("distance", distance);
+        telemetry.addData("Red", r);
+        telemetry.addData("Green", g);
+        telemetry.addData("Blue", b);
+
     }
 
-    private void goRightForBeacon() {
+    private void goLeftForBeacon() {
 
         while (!color()) {
             sensors();
@@ -130,7 +135,7 @@ public class RedBeacons extends LinearOpMode {
                 push();
             }
 
-            main.move(3, 0.1, motors);
+            main.move(2, 0.1, motors);
         }
 
     }
@@ -163,10 +168,10 @@ public class RedBeacons extends LinearOpMode {
         colorSensor.enableLed(false);
 
         //Makes sure the sensors are retracted
-        colorServo.setPosition(0.5);
-        odsServo.setPosition(0.5);
+        colorServo.setPosition(1);
+        odsServo.setPosition(0);
 
-        resetTime();
+        resetStartTime();
         waitForStart();
 
         //Running Code
@@ -177,25 +182,25 @@ public class RedBeacons extends LinearOpMode {
         //Starts from starting position, finds wall
         main.move(0, 1, motors);
         sleep(1300);
-        main.turn(0, 1, motors);
+        main.turn(1, 1, motors);
         sleep(475);
         main.move(0, 1, motors);
         sleep(450);
         //Extends ODS
-        odsServo.setPosition(1.0);
+        odsServo.setPosition(0.5);
 
         while (!wall()) {
             sensors();
-            main.move(0, 0.1, motors);
+            main.move(0, 0.2, motors);
         }
 
         //Extends color sensor
-        colorServo.setPosition(1.0);
+        colorServo.setPosition(0.5);
 
         resetTime();
         //Wall found, moves left until beacon is found, and pushes if it is the right color
 
-        while (!color() && noColor()) {
+        while (noColor()) {
             sensors();
 
             if (color()) {
@@ -206,12 +211,12 @@ public class RedBeacons extends LinearOpMode {
             }
             else {
                 if (getRuntime() < 1) {
-                    main.move(3, 0.1, motors);
-                    direction = 1;
-                }
-                else {
                     main.move(2, 0.1, motors);
                     direction = 0;
+                }
+                else {
+                    main.move(3, 0.1, motors);
+                    direction = 1;
                 }
             }
         }
@@ -238,15 +243,15 @@ public class RedBeacons extends LinearOpMode {
 
         //Resets, and prepares to push the next beacon
         pushed = false;
-        main.move(3, 0.5, motors);
+        main.move(2, 0.5, motors);
         sleep(300);
 
         //Moves to the right, staying the correct distance from the wall, and presses the beacon when it is in front of the correct color
-        goRightForBeacon();
+        goLeftForBeacon();
         pushed = false;
 
         //Turns the robot to go for the next two beacons
-        main.turn(1, 1, motors);
+        main.turn(0, 1, motors);
         sleep(475);
         main.turn(0, 0, motors);
 
@@ -257,18 +262,18 @@ public class RedBeacons extends LinearOpMode {
         double time = getRuntime();
 
         //Ready to continue. Goes for first beacon on the right.
-        goRightForBeacon();
+        goLeftForBeacon();
         pushed = false;
 
         //Goes for second beacon on the right
-        goRightForBeacon();
+        goLeftForBeacon();
 
         double time2 = (getRuntime() - time) * 100;
 
         long timeL = (long) time2;
 
         //Comes back to where robot was before previous two beacons
-        main.move(2, 1, motors);
+        main.move(3, 1, motors);
         sleep(timeL);
 
         //Moves back to near the first beacon
@@ -276,12 +281,12 @@ public class RedBeacons extends LinearOpMode {
         sleep((long) (time2*0.75));
 
         //Move in front of the center goal
-        main.move(3, 1, motors);
+        main.move(2, 1, motors);
         sleep((long) (time2/2));
 
         //Move the ball and park on the goal
-        odsServo.setPosition(0.5);
-        colorServo.setPosition(0.5);
+        odsServo.setPosition(1);
+        colorServo.setPosition(1);
         main.move(0, 1, motors);
         sleep(500);
         main.move(0, 0, motors);
