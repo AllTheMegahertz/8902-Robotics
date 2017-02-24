@@ -1,26 +1,38 @@
 [
     {
-        "merged": "/home/robotics/Documents/robotics/C:\\Users\\Mark\\Documents\\8902-Robotics\\TeamCode\\build\\intermediates\\res\\merged\\debug\\menu\\main_menu.xml",
-        "source": "/home/robotics/Documents/robotics/C:\\Users\\Mark\\Documents\\8902-Robotics\\TeamCode\\build\\intermediates\\exploded-aar\\Inspection-release\\res\\menu\\main_menu.xml"
+        "merged": "C:\\home\\robotics\\Documents\\robotics\\C:\\Users\\Mark\\Documents\\8902-Robotics\\TeamCode\\build\\intermediates\\res\\merged\\debug\\menu\\main_menu.xml",
+        "source": "C:\\home\\robotics\\Documents\\robotics\\C:\\Users\\Mark\\Documents\\8902-Robotics\\TeamCode\\build\\intermediates\\exploded-aar\\Inspection-release\\res\\menu\\main_menu.xml"
     },
     {
-        "merged": "/home/robotics/Documents/robotics/C:\\Users\\Mark\\Documents\\8902-Robotics\\TeamCode\\build\\intermediates\\res\\merged\\debug\\menu\\menu_server.xml",
-        "source": "/home/robotics/Documents/robotics/C:\\Users\\Mark\\Documents\\8902-Robotics\\TeamCode\\build\\intermediates\\exploded-aar\\Blocks-release\\res\\menu\\menu_server.xml"
+        "merged": "C:\\Users\\Robotics\\Documents\\Robotics\\TeamCode\\build\\intermediates\\res\\merged\\debug\\menu\\main_menu.xml",
+        "source": "C:\\Users\\Robotics\\Documents\\Robotics\\TeamCode\\build\\intermediates\\exploded-aar\\Inspection-release\\res\\menu\\main_menu.xml"
     },
     {
-        "merged": "/home/robotics/Documents/robotics/C:\\Users\\Mark\\Documents\\8902-Robotics\\TeamCode\\build\\intermediates\\res\\merged\\debug\\menu\\ftc_robot_controller.xml",
-        "source": "/home/robotics/Documents/robotics/C:\\Users\\Mark\\Documents\\8902-Robotics\\TeamCode\\build\\intermediates\\exploded-aar\\8902-Robotics\\FtcRobotController\\unspecified\\res\\menu\\ftc_robot_controller.xml"
+        "merged": "C:\\Users\\Robotics\\Documents\\Robotics\\TeamCode\\build\\intermediates\\res\\merged\\debug\\menu\\ftc_robot_controller.xml",
+        "source": "C:\\Users\\Robotics\\Documents\\Robotics\\TeamCode\\build\\intermediates\\exploded-aar\\Robotics\\FtcRobotController\\unspecified\\res\\menu\\ftc_robot_controller.xml"
     },
     {
-        "merged": "/home/robotics/Documents/robotics/TeamCode/build/intermediates/res/merged/debug/menu/ftc_robot_controller.xml",
-        "source": "/home/robotics/Documents/robotics/TeamCode/build/intermediates/exploded-aar/robotics/FtcRobotController/unspecified/res/menu/ftc_robot_controller.xml"
+        "merged": "C:\\home\\robotics\\Documents\\robotics\\TeamCode\\build\\intermediates\\res\\merged\\debug\\menu\\ftc_robot_controller.xml",
+        "source": "C:\\home\\robotics\\Documents\\robotics\\TeamCode\\build\\intermediates\\exploded-aar\\robotics\\FtcRobotController\\unspecified\\res\\menu\\ftc_robot_controller.xml"
     },
     {
-        "merged": "/home/robotics/Documents/robotics/TeamCode/build/intermediates/res/merged/debug/menu/menu_server.xml",
-        "source": "/home/robotics/Documents/robotics/TeamCode/build/intermediates/exploded-aar/Blocks-release/res/menu/menu_server.xml"
+        "merged": "C:\\home\\robotics\\Documents\\robotics\\C:\\Users\\Mark\\Documents\\8902-Robotics\\TeamCode\\build\\intermediates\\res\\merged\\debug\\menu\\ftc_robot_controller.xml",
+        "source": "C:\\home\\robotics\\Documents\\robotics\\C:\\Users\\Mark\\Documents\\8902-Robotics\\TeamCode\\build\\intermediates\\exploded-aar\\8902-Robotics\\FtcRobotController\\unspecified\\res\\menu\\ftc_robot_controller.xml"
     },
     {
-        "merged": "/home/robotics/Documents/robotics/TeamCode/build/intermediates/res/merged/debug/menu/main_menu.xml",
-        "source": "/home/robotics/Documents/robotics/TeamCode/build/intermediates/exploded-aar/Inspection-release/res/menu/main_menu.xml"
+        "merged": "C:\\home\\robotics\\Documents\\robotics\\C:\\Users\\Mark\\Documents\\8902-Robotics\\TeamCode\\build\\intermediates\\res\\merged\\debug\\menu\\menu_server.xml",
+        "source": "C:\\home\\robotics\\Documents\\robotics\\C:\\Users\\Mark\\Documents\\8902-Robotics\\TeamCode\\build\\intermediates\\exploded-aar\\Blocks-release\\res\\menu\\menu_server.xml"
+    },
+    {
+        "merged": "C:\\home\\robotics\\Documents\\robotics\\TeamCode\\build\\intermediates\\res\\merged\\debug\\menu\\menu_server.xml",
+        "source": "C:\\home\\robotics\\Documents\\robotics\\TeamCode\\build\\intermediates\\exploded-aar\\Blocks-release\\res\\menu\\menu_server.xml"
+    },
+    {
+        "merged": "C:\\home\\robotics\\Documents\\robotics\\TeamCode\\build\\intermediates\\res\\merged\\debug\\menu\\main_menu.xml",
+        "source": "C:\\home\\robotics\\Documents\\robotics\\TeamCode\\build\\intermediates\\exploded-aar\\Inspection-release\\res\\menu\\main_menu.xml"
+    },
+    {
+        "merged": "C:\\Users\\Robotics\\Documents\\Robotics\\TeamCode\\build\\intermediates\\res\\merged\\debug\\menu\\menu_server.xml",
+        "source": "C:\\Users\\Robotics\\Documents\\Robotics\\TeamCode\\build\\intermediates\\exploded-aar\\Blocks-release\\res\\menu\\menu_server.xml"
     }
 ]

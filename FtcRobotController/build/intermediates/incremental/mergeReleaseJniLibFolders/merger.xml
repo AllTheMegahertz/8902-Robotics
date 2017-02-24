@@ -1,2 +1,2 @@
 <?xml version="1.0" encoding="utf-8"?>
-<merger version="3"><dataSet config="main"><source path="/home/robotics/Documents/robotics/FtcRobotController/src/main/jniLibs"/></dataSet><dataSet config="release"><source path="/home/robotics/Documents/robotics/FtcRobotController/src/release/jniLibs"/></dataSet></merger>
+<merger version="3"><dataSet config="main"><source path="C:\Users\Robotics\Documents\Robotics\FtcRobotController\src\main\jniLibs"/></dataSet><dataSet config="release"><source path="C:\Users\Robotics\Documents\Robotics\FtcRobotController\src\release\jniLibs"/></dataSet></merger>

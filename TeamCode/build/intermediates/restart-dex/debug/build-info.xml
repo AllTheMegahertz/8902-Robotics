@@ -5,33 +5,33 @@
     density="hdpi"
     format="8"
     plugin-version="2.2.3"
-    timestamp="19433354472632"
+    timestamp="420924361409554"
     token="1238511509006797697"
     verifier="FULL_BUILD_REQUESTED" >
 
     <task
         name="javac"
-        duration="116" />
+        duration="498" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="16" />
+        duration="22" />
     <task
         name="verifier"
-        duration="1" />
+        duration="3" />
 
     <artifact
-        location="/home/robotics/Documents/robotics/TeamCode/build/outputs/apk/TeamCode-debug.apk"
+        location="C:\Users\Robotics\Documents\Robotics\TeamCode\build\outputs\apk\TeamCode-debug.apk"
         type="MAIN" />
 
     <build
-        timestamp="173765902595274"
-        verifier="COMPATIBLE" >
+        timestamp="420924361409554"
+        verifier="FULL_BUILD_REQUESTED" >
         <artifact
-            location="/home/robotics/Documents/8902-Robotics-testing/TeamCode/build/intermediates/reload-dex/debug/classes.dex"
-            type="RELOAD_DEX" />
+            location="C:\Users\Robotics\Documents\Robotics\TeamCode\build\outputs\apk\TeamCode-debug.apk"
+            type="MAIN" />
     </build>
 
 </instant-run>

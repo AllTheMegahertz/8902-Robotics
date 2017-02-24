@@ -1,5 +1,6 @@
 package org.firstinspires.ftc.teamcode;
 
+import com.qualcomm.hardware.hitechnic.HiTechnicNxtLightSensor;
 import com.qualcomm.robotcore.eventloop.opmode.Autonomous;
 import com.qualcomm.robotcore.eventloop.opmode.OpMode;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
@@ -24,6 +25,7 @@ public class Debugging extends OpMode {
 
     private ColorSensor colorSensor;
     private OpticalDistanceSensor ods;
+    private HiTechnicNxtLightSensor lightSensor;
     private Servo colorServo;
     private Servo odsServo;
 
@@ -42,6 +44,7 @@ public class Debugging extends OpMode {
         ods = hardwareMap.opticalDistanceSensor.get("distanceSensor");
         colorServo = hardwareMap.servo.get("colorServo");
         odsServo = hardwareMap.servo.get("odsServo");
+        lightSensor = (HiTechnicNxtLightSensor) hardwareMap.get("lightSensor");
 
         motors.add(backLeft);
         motors.add(backRight);
@@ -168,11 +171,15 @@ public class Debugging extends OpMode {
         //Sends telemetry for debugging
         telemetry.addData("Time", getRuntime());
         telemetry.addData("Distance", ods.getLightDetected());
+        telemetry.addData("Distance Raw", ods.getRawLightDetected());
         telemetry.addData("Red", colorSensor.red());
         telemetry.addData("Green", colorSensor.green());
         telemetry.addData("Blue", colorSensor.blue());
+        telemetry.addData("Alpha", colorSensor.alpha());
         telemetry.addData("Color Servo", colorServo.getPosition());
         telemetry.addData("ODS Servo", odsServo.getPosition());
+        telemetry.addData("Light Sensor", lightSensor.getLightDetected());
+        telemetry.addData("Light Raw", lightSensor.getLightDetected());
 
         for (DcMotor m : motors) {
             telemetry.addData(m.getDeviceName(), m.getPower());

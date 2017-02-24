@@ -1,5 +1,7 @@
 package org.firstinspires.ftc.teamcode;
 
+import android.media.MediaPlayer;
+
 import com.qualcomm.robotcore.eventloop.opmode.Autonomous;
 import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
 import com.qualcomm.robotcore.hardware.ColorSensor;
@@ -26,6 +28,9 @@ public class RedBeacons extends LinearOpMode {
     private DcMotor frontLeft;
     private DcMotor frontRight;
     private ArrayList<DcMotor> motors = new ArrayList<>();
+
+    private MediaPlayer moan;
+    private MediaPlayer guy;
 
     //Variables
     private boolean pushed = false;
@@ -62,7 +67,7 @@ public class RedBeacons extends LinearOpMode {
         g = colorSensor.green();
         b = colorSensor.blue();
 
-        return r + g + b <= 6 && r < 6 && b < 6;
+        return r < 5 && b < 5;
 
     }
 
@@ -74,36 +79,36 @@ public class RedBeacons extends LinearOpMode {
     //Pushes beacon
     private void push() {
 
-        sensors();
+        //Gets sensors out of the way
+        odsServo.setPosition(1);
+        colorServo.setPosition(1);
+
+        moan.start();
 
         if (!pushed) {
             pushed = true;
             resetTime();
         }
 
-        //Gets sensors out of the way
-        odsServo.setPosition(1);
-        colorServo.setPosition(1);
+        sleep(300);
 
         //Moves forward for 0.5 seconds
-        main.move(0, 0.1, motors);
+        main.move(0, 0.2, motors);
         sleep(500);
+
+        //Moves back
+        main.move(1, 0.2, motors);
+        sleep(200);
+
+        //Restores servos
+        odsServo.setPosition(0.3);
+        colorServo.setPosition(0.125);
 
         //Moves back until wall no longer detected
         while (wall()) {
             sensors();
             main.move(1, 0.1, motors);
         }
-
-        //Moves forward until wall detected, plus 0.1 seconds
-        while (!wall()) {
-            sensors();
-            main.move(0, 0.1, motors);
-        }
-
-        //Restores servos
-        odsServo.setPosition(0.3);
-        colorServo.setPosition(0.125);
 
         sleep(100);
         main.move(0, 0, motors);
@@ -143,6 +148,8 @@ public class RedBeacons extends LinearOpMode {
     public void runOpMode() {
 
         //Initialization Routine
+        moan = MediaPlayer.create(hardwareMap.appContext, R.raw.moan);
+        guy = MediaPlayer.create(hardwareMap.appContext, R.raw.guy);
 
         //Initializes Motors
         backLeft = hardwareMap.dcMotor.get("backLeft");
@@ -183,7 +190,7 @@ public class RedBeacons extends LinearOpMode {
         main.move(0, 1, motors);
         sleep(1300);
         main.turn(1, 1, motors);
-        sleep(475);
+        sleep(450);
         main.move(0, 1, motors);
         sleep(450);
         //Extends ODS
@@ -192,39 +199,45 @@ public class RedBeacons extends LinearOpMode {
 
         while (!wall()) {
             sensors();
-            main.move(0, 0.1, motors);
+            main.move(0, 0.2, motors);
         }
+
+        main.move(0, 0, motors);
 
         //Extends color sensor
         colorServo.setPosition(0.125);
+        sleep(100);
 
         resetTime();
+        resetStartTime();
         //Wall found, moves left until beacon is found, and pushes if it is the right color
 
-        while (noColor() && !color()) {
+        while (noColor() && !color() && !pushed) {
             sensors();
+
+            if (!wall()) {
+                main.move(0, 0.1, motors);
+            }
+            else {
+                if (getRuntime() <= 1.5) {
+                    main.move(3, 0.1, motors);
+                    direction = 1;
+                }
+                else {
+                    main.move(2, 0.1, motors);
+                    direction = 0;
+                }
+            }
 
             if (color()) {
                 push();
             }
-            else if (!wall()) {
-                main.move(0, 0.1, motors);
-            }
-            else {
-                if (getRuntime() < 1) {
-                    main.move(2, 0.1, motors);
-                    direction = 0;
-                }
-                else {
-                    main.move(3, 0.1, motors);
-                    direction = 1;
-                }
-            }
+
         }
 
         //If the beacon hasn't been pushed, but the robot has found the beacon
         if (!pushed) {
-            while (!color()) {
+            while (!pushed) {
                 sensors();
 
                 if (color()) {
@@ -244,17 +257,26 @@ public class RedBeacons extends LinearOpMode {
 
         //Resets, and prepares to push the next beacon
         pushed = false;
-        main.move(2, 0.5, motors);
+        main.move(1, 0.5, motors);
         sleep(300);
 
-        //Moves to the right, staying the correct distance from the wall, and presses the beacon when it is in front of the correct color
+        //Moves to the left, staying the correct distance from the wall, and presses the beacon when it is in front of the correct color
         goLeftForBeacon();
         pushed = false;
 
         //Turns the robot to go for the next two beacons
+        guy.start();
         main.turn(0, 1, motors);
-        sleep(475);
+        sleep(450);
         main.turn(0, 0, motors);
+
+        while (!wall()) {
+
+            main.move(0, 0.2, motors);
+
+        }
+
+        main.move(0, 0, motors);
 
         //Makes sure 10 seconds have passed
         while (getRuntime() + runningTime <= 10);
@@ -291,7 +313,6 @@ public class RedBeacons extends LinearOpMode {
         main.move(0, 1, motors);
         sleep(500);
         main.move(0, 0, motors);
-
     }
 
 }

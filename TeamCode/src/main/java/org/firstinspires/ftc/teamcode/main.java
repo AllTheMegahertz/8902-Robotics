@@ -17,6 +17,11 @@ public class main {
             d = -1;
         }
 
+        for (DcMotor motor : m) {
+            motor.setMode(DcMotor.RunMode.RUN_USING_ENCODER);
+        }
+
+
         m.get(0).setPower(p*d);
         m.get(1).setPower(p*d);
         m.get(2).setPower(p*d);
@@ -25,6 +30,10 @@ public class main {
 
     //Moves the robot at a given speed and direction
     public static void move(int d, double p, ArrayList<DcMotor> m) {
+
+        for (DcMotor motor : m) {
+            motor.setMode(DcMotor.RunMode.RUN_USING_ENCODER);
+        }
 
         if (d == 0) {
             d = -1;
