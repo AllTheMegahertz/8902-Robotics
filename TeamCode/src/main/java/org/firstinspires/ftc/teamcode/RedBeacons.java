@@ -231,7 +231,7 @@ public class RedBeacons extends LinearOpMode {
         //Starts from starting position, finds wall
         main.move(0, 1, motors);
         sleep(1300);
-        main.turn(1, 1, motors);
+        main.turn(0, 1, motors);
         sleep(450);
         main.move(0, 1, motors);
         sleep(450);
@@ -275,9 +275,6 @@ public class RedBeacons extends LinearOpMode {
             }
 
         }
-        */
-
-        goRightForBeacon();
 
         //If the beacon hasn't been pushed, but the robot has found the beacon
         if (!pushed) {
@@ -298,6 +295,9 @@ public class RedBeacons extends LinearOpMode {
 
             }
         }
+        */
+
+        goLeftForBeacon();
 
         //Resets, and prepares to push the next beacon
         pushed = false;
@@ -305,7 +305,7 @@ public class RedBeacons extends LinearOpMode {
         sleep(300);
 
         //Moves to the left, staying the correct distance from the wall, and presses the beacon when it is in front of the correct color
-        goLeftForBeacon();
+        goRightForBeacon();
         pushed = false;
 
         //Turns the robot to go for the next two beacons
@@ -329,18 +329,18 @@ public class RedBeacons extends LinearOpMode {
         double time = getRuntime();
 
         //Ready to continue. Goes for first beacon on the right.
-        goLeftForBeacon();
+        goRightForBeacon();
         pushed = false;
 
         //Goes for second beacon on the right
-        goLeftForBeacon();
+        goRightForBeacon();
 
         double time2 = (getRuntime() - time) * 100;
 
         long timeL = (long) time2;
 
         //Comes back to where robot was before previous two beacons
-        main.move(3, 1, motors);
+        main.move(2, 1, motors);
         sleep(timeL);
 
         //Moves back to near the first beacon
@@ -348,7 +348,7 @@ public class RedBeacons extends LinearOpMode {
         sleep((long) (time2*0.75));
 
         //Move in front of the center goal
-        main.move(2, 1, motors);
+        main.move(3, 1, motors);
         sleep((long) (time2/2));
 
         //Move the ball and park on the goal
