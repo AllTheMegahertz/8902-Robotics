@@ -2,6 +2,7 @@ package org.firstinspires.ftc.teamcode;
 
 import android.media.MediaPlayer;
 
+import com.qualcomm.hardware.hitechnic.HiTechnicNxtLightSensor;
 import com.qualcomm.robotcore.eventloop.opmode.Autonomous;
 import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
 import com.qualcomm.robotcore.hardware.ColorSensor;
@@ -19,6 +20,7 @@ public class RedBeacons extends LinearOpMode {
 
     private ColorSensor colorSensor;
     private OpticalDistanceSensor ods;
+    private HiTechnicNxtLightSensor lightSensor;
 
     private Servo colorServo;
     private Servo odsServo;
@@ -131,16 +133,55 @@ public class RedBeacons extends LinearOpMode {
 
     }
 
+    //Uses light sensor to find tape on the ground
+    private boolean light() {
+
+        return lightSensor.getLightDetected() >= 0.3;
+
+    }
+
     private void goLeftForBeacon() {
 
-        while (!color()) {
+        while (!light()) {
             sensors();
+            main.move(2, 0.2, motors);
+        }
 
+        main.move(2, 0.2, motors);
+        sleep(100);
+
+        if (color()) {
+            push();
+        }
+        else {
+            main.move(3, 0.2, motors);
+            sleep(200);
             if (color()) {
                 push();
             }
+        }
 
-            main.move(2, 0.1, motors);
+    }
+
+    private void goRightForBeacon() {
+
+        while (!light()) {
+            sensors();
+            main.move(3, 0.2, motors);
+        }
+
+        main.move(2, 0.2, motors);
+        sleep(100);
+
+        if (color()) {
+            push();
+        }
+        else {
+            main.move(3, 0.2, motors);
+            sleep(200);
+            if (color()) {
+                push();
+            }
         }
 
     }
@@ -164,6 +205,7 @@ public class RedBeacons extends LinearOpMode {
         //Initializes Sensors
         colorSensor = hardwareMap.colorSensor.get("colorSensor");
         ods = hardwareMap.opticalDistanceSensor.get("distanceSensor");
+        lightSensor = (HiTechnicNxtLightSensor) hardwareMap.get("lightSensor");
 
         //Adds all motors to a list
         motors.add(backLeft);
@@ -209,9 +251,8 @@ public class RedBeacons extends LinearOpMode {
         sleep(100);
 
         resetTime();
-        resetStartTime();
         //Wall found, moves left until beacon is found, and pushes if it is the right color
-
+        /*
         while (noColor() && !color() && !pushed) {
             sensors();
 
@@ -234,6 +275,9 @@ public class RedBeacons extends LinearOpMode {
             }
 
         }
+        */
+
+        goRightForBeacon();
 
         //If the beacon hasn't been pushed, but the robot has found the beacon
         if (!pushed) {

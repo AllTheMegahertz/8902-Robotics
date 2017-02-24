@@ -19,6 +19,7 @@ public class main {
 
         for (DcMotor motor : m) {
             motor.setMode(DcMotor.RunMode.RUN_USING_ENCODER);
+            motor.setMaxSpeed(1440);
         }
 
 
@@ -33,6 +34,7 @@ public class main {
 
         for (DcMotor motor : m) {
             motor.setMode(DcMotor.RunMode.RUN_USING_ENCODER);
+            motor.setMaxSpeed(1440);
         }
 
         if (d == 0) {
