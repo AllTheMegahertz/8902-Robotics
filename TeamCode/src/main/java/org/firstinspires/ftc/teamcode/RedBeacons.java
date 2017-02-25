@@ -2,6 +2,7 @@ package org.firstinspires.ftc.teamcode;
 
 import android.media.MediaPlayer;
 
+import com.qualcomm.hardware.hitechnic.HiTechnicNxtColorSensor;
 import com.qualcomm.hardware.hitechnic.HiTechnicNxtLightSensor;
 import com.qualcomm.robotcore.eventloop.opmode.Autonomous;
 import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
@@ -48,7 +49,7 @@ public class RedBeacons extends LinearOpMode {
     //Checks using the ODS for a wall
     private boolean wall() {
 
-        return ods.getLightDetected() >= 0.002;
+        return ods.getLightDetected() >= 0.005;
 
     }
 
@@ -58,7 +59,7 @@ public class RedBeacons extends LinearOpMode {
         int r = colorSensor.red();
         int b = colorSensor.blue();
 
-        return r >= 5 && r > b;
+        return r >= 4 && r > b;
 
     }
 
@@ -69,7 +70,7 @@ public class RedBeacons extends LinearOpMode {
         g = colorSensor.green();
         b = colorSensor.blue();
 
-        return r < 5 && b < 5;
+        return r < 4 && b < 4;
 
     }
 
@@ -136,7 +137,7 @@ public class RedBeacons extends LinearOpMode {
     //Uses light sensor to find tape on the ground
     private boolean light() {
 
-        return lightSensor.getLightDetected() >= 0.3;
+        return lightSensor.getRawLightDetected() >= 2.5;
 
     }
 
@@ -144,7 +145,7 @@ public class RedBeacons extends LinearOpMode {
 
         while (!light()) {
             sensors();
-            main.move(2, 0.2, motors);
+            main.move(2, 0.1, motors);
         }
 
         main.move(2, 0.2, motors);
@@ -165,10 +166,17 @@ public class RedBeacons extends LinearOpMode {
 
     private void goRightForBeacon() {
 
-        while (!light()) {
+        while (!color()) {
             sensors();
-            main.move(3, 0.2, motors);
+            if (!wall()) {
+                main.move(0, 0.1, motors);
+            }
+            else {
+                main.move(3, 0.1, motors);
+            }
         }
+
+        guy.start();
 
         main.move(2, 0.2, motors);
         sleep(100);
@@ -198,6 +206,13 @@ public class RedBeacons extends LinearOpMode {
         frontLeft = hardwareMap.dcMotor.get("frontLeft");
         frontRight = hardwareMap.dcMotor.get("frontRight");
 
+
+
+        for (DcMotor m : motors) {
+            m.setMode(DcMotor.RunMode.STOP_AND_RESET_ENCODER);
+            m.setMode(DcMotor.RunMode.RUN_USING_ENCODER);
+        }
+
         //Initializes Servos
         colorServo = hardwareMap.servo.get("colorServo");
         odsServo = hardwareMap.servo.get("odsServo");
@@ -206,6 +221,7 @@ public class RedBeacons extends LinearOpMode {
         colorSensor = hardwareMap.colorSensor.get("colorSensor");
         ods = hardwareMap.opticalDistanceSensor.get("distanceSensor");
         lightSensor = (HiTechnicNxtLightSensor) hardwareMap.get("lightSensor");
+        lightSensor.enableLed(true);
 
         //Adds all motors to a list
         motors.add(backLeft);
@@ -297,7 +313,7 @@ public class RedBeacons extends LinearOpMode {
         }
         */
 
-        goLeftForBeacon();
+        goRightForBeacon();
 
         //Resets, and prepares to push the next beacon
         pushed = false;
@@ -309,7 +325,6 @@ public class RedBeacons extends LinearOpMode {
         pushed = false;
 
         //Turns the robot to go for the next two beacons
-        guy.start();
         main.turn(0, 1, motors);
         sleep(450);
         main.turn(0, 0, motors);

@@ -1,5 +1,6 @@
 package org.firstinspires.ftc.teamcode;
 
+import com.qualcomm.hardware.hitechnic.HiTechnicNxtColorSensor;
 import com.qualcomm.hardware.hitechnic.HiTechnicNxtLightSensor;
 import com.qualcomm.robotcore.eventloop.opmode.Autonomous;
 import com.qualcomm.robotcore.eventloop.opmode.OpMode;
@@ -45,11 +46,17 @@ public class Debugging extends OpMode {
         colorServo = hardwareMap.servo.get("colorServo");
         odsServo = hardwareMap.servo.get("odsServo");
         lightSensor = (HiTechnicNxtLightSensor) hardwareMap.get("lightSensor");
+        lightSensor.enableLed(true);
 
         motors.add(backLeft);
         motors.add(backRight);
         motors.add(frontLeft);
         motors.add(frontRight);
+
+        for (DcMotor m : motors) {
+            m.setMode(DcMotor.RunMode.STOP_AND_RESET_ENCODER);
+            m.setMode(DcMotor.RunMode.RUN_USING_ENCODER);
+        }
 
         colorSensor.enableLed(false);
 
@@ -178,8 +185,9 @@ public class Debugging extends OpMode {
         telemetry.addData("Alpha", colorSensor.alpha());
         telemetry.addData("Color Servo", colorServo.getPosition());
         telemetry.addData("ODS Servo", odsServo.getPosition());
-        telemetry.addData("Light Sensor", lightSensor.getLightDetected());
-        telemetry.addData("Light Raw", lightSensor.getLightDetected());
+        telemetry.addData("Light", lightSensor.getLightDetected());
+        telemetry.addData("Raw Light", lightSensor.getRawLightDetected());
+        telemetry.addData("Raw Max", lightSensor.getRawLightDetectedMax());
 
         for (DcMotor m : motors) {
             telemetry.addData(m.getDeviceName(), m.getPower());

@@ -39,6 +39,7 @@ import java.util.ArrayList;
 import com.qualcomm.robotcore.eventloop.opmode.OpMode;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 import com.qualcomm.robotcore.hardware.DcMotor;
+import com.qualcomm.robotcore.hardware.Servo;
 
 //Latest Revision - 02/21/2017 - Mark Vadeika
 
@@ -51,6 +52,9 @@ public class K9botTeleopTank_Linear extends OpMode {
     private DcMotor frontLeft;
     private DcMotor frontRight;
 
+    private Servo colorServo;
+    private Servo odsServo;
+
     private boolean forward = true;
 
     @Override
@@ -59,6 +63,12 @@ public class K9botTeleopTank_Linear extends OpMode {
         backRight = hardwareMap.dcMotor.get("backRight");
         frontLeft = hardwareMap.dcMotor.get("frontLeft");
         frontRight = hardwareMap.dcMotor.get("frontRight");
+
+        colorServo = hardwareMap.servo.get("colorServo");
+        odsServo = hardwareMap.servo.get("odsServo");
+
+        colorServo.setPosition(1);
+        odsServo.setPosition(1);
     }
 
 
