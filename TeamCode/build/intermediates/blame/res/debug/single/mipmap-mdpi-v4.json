@@ -1,14 +1,6 @@
 [
     {
-        "merged": "C:\\home\\robotics\\Documents\\robotics\\TeamCode\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi-v4\\ic_launcher.png",
-        "source": "C:\\home\\robotics\\Documents\\robotics\\TeamCode\\build\\intermediates\\exploded-aar\\robotics\\FtcRobotController\\unspecified\\res\\mipmap-mdpi-v4\\ic_launcher.png"
-    },
-    {
         "merged": "C:\\Users\\Robotics\\Documents\\Robotics\\TeamCode\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi-v4\\ic_launcher.png",
         "source": "C:\\Users\\Robotics\\Documents\\Robotics\\TeamCode\\build\\intermediates\\exploded-aar\\Robotics\\FtcRobotController\\unspecified\\res\\mipmap-mdpi-v4\\ic_launcher.png"
-    },
-    {
-        "merged": "C:\\home\\robotics\\Documents\\robotics\\C:\\Users\\Mark\\Documents\\8902-Robotics\\TeamCode\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi-v4\\ic_launcher.png",
-        "source": "C:\\home\\robotics\\Documents\\robotics\\C:\\Users\\Mark\\Documents\\8902-Robotics\\TeamCode\\build\\intermediates\\exploded-aar\\8902-Robotics\\FtcRobotController\\unspecified\\res\\mipmap-mdpi-v4\\ic_launcher.png"
     }
 ]
