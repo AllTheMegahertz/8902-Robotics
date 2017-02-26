@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Sat Feb 25 22:58:59 EST 2017
+#Sun Feb 26 15:18:15 EST 2017
 14.set=ANDROID_RESOURCE
 180.file=C\:\\Users\\Robotics\\Documents\\Robotics\\TeamCode\\build\\intermediates\\res\\resources-debug.ap_\\res\\xml\\squarebot.xml
 118.set=ANDROID_RESOURCE
@@ -32,7 +32,7 @@
 92.file=C\:\\Users\\Robotics\\Documents\\Robotics\\TeamCode\\build\\intermediates\\res\\resources-debug.ap_\\res\\raw\\song.wav
 167.file=C\:\\Users\\Robotics\\Documents\\Robotics\\TeamCode\\build\\intermediates\\assets\\debug\\blockly\\msg\\js\\en.js
 121.base=C\:\\Users\\Robotics\\Documents\\Robotics\\TeamCode\\build\\intermediates\\assets\\debug
-142.file=C\:\\Users\\Robotics\\Documents\\Robotics\\TeamCode\\build\\intermediates\\res\\resources-debug.ap_\\res\\layout\\legacy.xml
+142.file=C\:\\Users\\Robotics\\Documents\\Robotics\\TeamCode\\build\\intermediates\\res\\resources-debug.ap_\\res\\layout\\pwm_device.xml
 173.base=C\:\\Users\\Robotics\\Documents\\Robotics\\TeamCode\\build\\intermediates\\res\\resources-debug.ap_
 95.set=ANDROID_RESOURCE
 100.set=ANDROID_RESOURCE
@@ -45,7 +45,7 @@
 21.base=C\:\\Users\\Robotics\\Documents\\Robotics\\TeamCode\\build\\intermediates\\res\\resources-debug.ap_
 17.set=ANDROID_RESOURCE
 73.base=C\:\\Users\\Robotics\\Documents\\Robotics\\TeamCode\\build\\intermediates\\assets\\debug
-127.file=C\:\\Users\\Robotics\\Documents\\Robotics\\TeamCode\\build\\intermediates\\res\\resources-debug.ap_\\res\\layout\\matrices.xml
+127.file=C\:\\Users\\Robotics\\Documents\\Robotics\\TeamCode\\build\\intermediates\\res\\resources-debug.ap_\\res\\layout\\pwms.xml
 63.set=ASSET
 6.base=C\:\\Users\\Robotics\\Documents\\Robotics\\TeamCode\\build\\intermediates\\res\\resources-debug.ap_
 5.set=ASSET
@@ -60,7 +60,7 @@
 27.file=C\:\\Users\\Robotics\\Documents\\Robotics\\TeamCode\\build\\intermediates\\assets\\debug\\StonesAndChips.dat
 79.file=C\:\\Users\\Robotics\\Documents\\Robotics\\TeamCode\\build\\intermediates\\res\\resources-debug.ap_\\resources.arsc
 31.set=ANDROID_RESOURCE
-54.file=C\:\\Users\\Robotics\\Documents\\Robotics\\TeamCode\\build\\intermediates\\res\\resources-debug.ap_\\res\\raw\\errormessage.wav
+54.file=C\:\\Users\\Robotics\\Documents\\Robotics\\TeamCode\\build\\intermediates\\res\\resources-debug.ap_\\res\\layout\\servo_list.xml
 108.base=C\:\\Users\\Robotics\\Documents\\Robotics\\TeamCode\\build\\intermediates\\res\\resources-debug.ap_
 135.set=ASSET
 81.file=C\:\\Users\\Robotics\\Documents\\Robotics\\TeamCode\\build\\intermediates\\assets\\debug\\images\\ftcLightSensor.png
@@ -75,7 +75,7 @@
 98.set=ASSET
 87.base=C\:\\Users\\Robotics\\Documents\\Robotics\\TeamCode\\build\\intermediates\\assets\\debug
 10.base=C\:\\Users\\Robotics\\Documents\\Robotics\\TeamCode\\build\\intermediates\\res\\resources-debug.ap_
-66.file=C\:\\Users\\Robotics\\Documents\\Robotics\\TeamCode\\build\\intermediates\\res\\resources-debug.ap_\\res\\layout\\orange_warning.xml
+66.file=C\:\\Users\\Robotics\\Documents\\Robotics\\TeamCode\\build\\intermediates\\res\\resources-debug.ap_\\res\\raw\\cube_mesh_vertex_shader.glsl
 41.file=C\:\\Users\\Robotics\\Documents\\Robotics\\TeamCode\\build\\intermediates\\res\\resources-debug.ap_\\res\\layout\\simple_device.xml
 116.file=C\:\\Users\\Robotics\\Documents\\Robotics\\TeamCode\\build\\intermediates\\res\\resources-debug.ap_\\res\\raw\\chimeconnect.wav
 93.file=C\:\\Users\\Robotics\\Documents\\Robotics\\TeamCode\\build\\intermediates\\assets\\debug\\blocks\\servo.js
@@ -83,7 +83,7 @@
 59.set=ASSET
 168.file=C\:\\Users\\Robotics\\Documents\\Robotics\\TeamCode\\build\\intermediates\\res\\resources-debug.ap_\\res\\layout\\button_list.xml
 122.base=C\:\\Users\\Robotics\\Documents\\Robotics\\TeamCode\\build\\intermediates\\assets\\debug
-143.file=C\:\\Users\\Robotics\\Documents\\Robotics\\TeamCode\\build\\intermediates\\res\\resources-debug.ap_\\res\\layout\\pwm_device.xml
+143.file=C\:\\Users\\Robotics\\Documents\\Robotics\\TeamCode\\build\\intermediates\\res\\resources-debug.ap_\\res\\layout\\legacy.xml
 174.base=C\:\\Users\\Robotics\\Documents\\Robotics\\TeamCode\\build\\intermediates\\res\\resources-debug.ap_
 110.set=ANDROID_RESOURCE
 1.file=C\:\\Users\\Robotics\\Documents\\Robotics\\TeamCode\\build\\intermediates\\assets\\debug\\toolbox\\images.css
@@ -95,7 +95,7 @@
 22.base=C\:\\Users\\Robotics\\Documents\\Robotics\\TeamCode\\build\\intermediates\\assets\\debug
 27.set=ASSET
 74.base=C\:\\Users\\Robotics\\Documents\\Robotics\\TeamCode\\build\\intermediates\\assets\\debug
-128.file=C\:\\Users\\Robotics\\Documents\\Robotics\\TeamCode\\build\\intermediates\\res\\resources-debug.ap_\\res\\layout\\pwms.xml
+128.file=C\:\\Users\\Robotics\\Documents\\Robotics\\TeamCode\\build\\intermediates\\res\\resources-debug.ap_\\res\\layout\\matrices.xml
 73.set=ASSET
 7.base=C\:\\Users\\Robotics\\Documents\\Robotics\\TeamCode\\build\\intermediates\\assets\\debug
 103.file=C\:\\Users\\Robotics\\Documents\\Robotics\\TeamCode\\build\\intermediates\\assets\\debug\\blocks\\comment.js
@@ -108,7 +108,7 @@
 80.set=ASSET
 28.file=C\:\\Users\\Robotics\\Documents\\Robotics\\TeamCode\\build\\intermediates\\res\\resources-debug.ap_\\res\\raw\\nxtstartupsound.wav
 41.set=ANDROID_RESOURCE
-55.file=C\:\\Users\\Robotics\\Documents\\Robotics\\TeamCode\\build\\intermediates\\res\\resources-debug.ap_\\res\\layout\\servo_list.xml
+55.file=C\:\\Users\\Robotics\\Documents\\Robotics\\TeamCode\\build\\intermediates\\res\\resources-debug.ap_\\res\\raw\\errormessage.wav
 109.base=C\:\\Users\\Robotics\\Documents\\Robotics\\TeamCode\\build\\intermediates\\res\\resources-debug.ap_
 30.file=C\:\\Users\\Robotics\\Documents\\Robotics\\TeamCode\\build\\intermediates\\assets\\debug\\blocks\\hardware_util.js
 145.set=ASSET
@@ -124,7 +124,7 @@
 113.set=ASSET
 88.base=C\:\\Users\\Robotics\\Documents\\Robotics\\TeamCode\\build\\intermediates\\res\\resources-debug.ap_
 11.base=C\:\\Users\\Robotics\\Documents\\Robotics\\TeamCode\\build\\intermediates\\assets\\debug
-67.file=C\:\\Users\\Robotics\\Documents\\Robotics\\TeamCode\\build\\intermediates\\res\\resources-debug.ap_\\res\\raw\\cube_mesh_vertex_shader.glsl
+67.file=C\:\\Users\\Robotics\\Documents\\Robotics\\TeamCode\\build\\intermediates\\res\\resources-debug.ap_\\res\\layout\\orange_warning.xml
 42.file=C\:\\Users\\Robotics\\Documents\\Robotics\\TeamCode\\build\\intermediates\\assets\\debug\\blockly\\media\\handclosed.cur
 117.file=C\:\\Users\\Robotics\\Documents\\Robotics\\TeamCode\\build\\intermediates\\assets\\debug\\blockly\\media\\disconnect.wav
 94.file=C\:\\Users\\Robotics\\Documents\\Robotics\\TeamCode\\build\\intermediates\\assets\\debug\\images\\ftcServo.png
@@ -315,7 +315,7 @@
 86.file=C\:\\Users\\Robotics\\Documents\\Robotics\\TeamCode\\build\\intermediates\\res\\resources-debug.ap_\\res\\layout\\info_button.xml
 40.base=C\:\\Users\\Robotics\\Documents\\Robotics\\TeamCode\\build\\intermediates\\assets\\debug
 42.set=ASSET
-61.file=C\:\\Users\\Robotics\\Documents\\Robotics\\TeamCode\\build\\intermediates\\res\\resources-debug.ap_\\res\\raw\\warningmessage.wav
+61.file=C\:\\Users\\Robotics\\Documents\\Robotics\\TeamCode\\build\\intermediates\\res\\resources-debug.ap_\\res\\layout\\red_line.xml
 115.base=C\:\\Users\\Robotics\\Documents\\Robotics\\TeamCode\\build\\intermediates\\res\\resources-debug.ap_
 92.base=C\:\\Users\\Robotics\\Documents\\Robotics\\TeamCode\\build\\intermediates\\res\\resources-debug.ap_
 167.base=C\:\\Users\\Robotics\\Documents\\Robotics\\TeamCode\\build\\intermediates\\assets\\debug
@@ -451,7 +451,7 @@ count=192
 31.base=C\:\\Users\\Robotics\\Documents\\Robotics\\TeamCode\\build\\intermediates\\res\\resources-debug.ap_
 58.set=ANDROID_RESOURCE
 83.base=C\:\\Users\\Robotics\\Documents\\Robotics\\TeamCode\\build\\intermediates\\assets\\debug
-62.file=C\:\\Users\\Robotics\\Documents\\Robotics\\TeamCode\\build\\intermediates\\res\\resources-debug.ap_\\res\\layout\\red_line.xml
+62.file=C\:\\Users\\Robotics\\Documents\\Robotics\\TeamCode\\build\\intermediates\\res\\resources-debug.ap_\\res\\raw\\warningmessage.wav
 137.file=C\:\\Users\\Robotics\\Documents\\Robotics\\TeamCode\\build\\intermediates\\assets\\debug\\images\\ftcLED.png
 189.file=C\:\\Users\\Robotics\\Documents\\Robotics\\TeamCode\\build\\intermediates\\res\\resources-debug.ap_\\res\\drawable-hdpi-v4\\button_shape.xml
 112.file=C\:\\Users\\Robotics\\Documents\\Robotics\\TeamCode\\build\\intermediates\\assets\\debug\\blockly\\media\\delete.wav
@@ -485,7 +485,7 @@ count=192
 49.file=C\:\\Users\\Robotics\\Documents\\Robotics\\TeamCode\\build\\intermediates\\assets\\debug\\images\\ftcPwmOutput.png
 24.file=C\:\\Users\\Robotics\\Documents\\Robotics\\TeamCode\\build\\intermediates\\assets\\debug\\images\\ftcAnalogInput.png
 144.set=ANDROID_RESOURCE
-76.file=C\:\\Users\\Robotics\\Documents\\Robotics\\TeamCode\\build\\intermediates\\res\\resources-debug.ap_\\res\\layout\\shape.xml
+76.file=C\:\\Users\\Robotics\\Documents\\Robotics\\TeamCode\\build\\intermediates\\res\\resources-debug.ap_\\res\\raw\\guy.wav
 51.file=C\:\\Users\\Robotics\\Documents\\Robotics\\TeamCode\\build\\intermediates\\assets\\debug\\blocks\\project_util.js
 105.base=C\:\\Users\\Robotics\\Documents\\Robotics\\TeamCode\\build\\intermediates\\assets\\debug
 9.file=C\:\\Users\\Robotics\\Documents\\Robotics\\TeamCode\\build\\intermediates\\res\\resources-debug.ap_\\res\\layout\\activity_programming_mode.xml
@@ -532,7 +532,7 @@ count=192
 50.set=ANDROID_RESOURCE
 25.file=C\:\\Users\\Robotics\\Documents\\Robotics\\TeamCode\\build\\intermediates\\res\\resources-debug.ap_\\res\\layout\\digital_devices.xml
 154.set=ASSET
-77.file=C\:\\Users\\Robotics\\Documents\\Robotics\\TeamCode\\build\\intermediates\\res\\resources-debug.ap_\\res\\raw\\guy.wav
+77.file=C\:\\Users\\Robotics\\Documents\\Robotics\\TeamCode\\build\\intermediates\\res\\resources-debug.ap_\\res\\layout\\shape.xml
 11.set=ASSET
 52.file=C\:\\Users\\Robotics\\Documents\\Robotics\\TeamCode\\build\\intermediates\\assets\\debug\\blocks\\touch_sensor.js
 106.base=C\:\\Users\\Robotics\\Documents\\Robotics\\TeamCode\\build\\intermediates\\res\\resources-debug.ap_

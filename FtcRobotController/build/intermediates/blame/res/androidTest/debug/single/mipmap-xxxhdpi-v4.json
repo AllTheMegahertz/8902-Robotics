@@ -4,11 +4,11 @@
         "source": "C:\\Users\\Robotics\\Documents\\Robotics\\FtcRobotController\\build\\intermediates\\bundles\\debug\\res\\mipmap-xxxhdpi-v4\\ic_launcher.png"
     },
     {
-        "merged": "C:\\home\\robotics\\Documents\\robotics\\FtcRobotController\\build\\intermediates\\res\\merged\\androidTest\\debug\\mipmap-xxxhdpi-v4\\ic_launcher.png",
-        "source": "C:\\home\\robotics\\Documents\\robotics\\FtcRobotController\\build\\intermediates\\bundles\\debug\\res\\mipmap-xxxhdpi-v4\\ic_launcher.png"
-    },
-    {
         "merged": "C:\\home\\robotics\\Documents\\robotics\\C:\\Users\\Mark\\Documents\\8902-Robotics\\FtcRobotController\\build\\intermediates\\res\\merged\\androidTest\\debug\\mipmap-xxxhdpi-v4\\ic_launcher.png",
         "source": "C:\\home\\robotics\\Documents\\robotics\\C:\\Users\\Mark\\Documents\\8902-Robotics\\FtcRobotController\\build\\intermediates\\bundles\\debug\\res\\mipmap-xxxhdpi-v4\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\home\\robotics\\Documents\\robotics\\FtcRobotController\\build\\intermediates\\res\\merged\\androidTest\\debug\\mipmap-xxxhdpi-v4\\ic_launcher.png",
+        "source": "C:\\home\\robotics\\Documents\\robotics\\FtcRobotController\\build\\intermediates\\bundles\\debug\\res\\mipmap-xxxhdpi-v4\\ic_launcher.png"
     }
 ]

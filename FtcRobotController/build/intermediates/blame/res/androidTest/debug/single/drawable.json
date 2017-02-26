@@ -8,14 +8,6 @@
         "source": "C:\\home\\robotics\\Documents\\robotics\\C:\\Users\\Mark\\Documents\\8902-Robotics\\FtcRobotController\\build\\intermediates\\exploded-aar\\Inspection-release\\res\\drawable\\icon_robotcontroller.png"
     },
     {
-        "merged": "C:\\home\\robotics\\Documents\\robotics\\FtcRobotController\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\button_shape.xml",
-        "source": "C:\\home\\robotics\\Documents\\robotics\\FtcRobotController\\build\\intermediates\\exploded-aar\\FtcCommon-release\\res\\drawable\\button_shape.xml"
-    },
-    {
-        "merged": "C:\\Users\\Robotics\\Documents\\Robotics\\FtcRobotController\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\icon_menu.png",
-        "source": "C:\\Users\\Robotics\\Documents\\Robotics\\FtcRobotController\\build\\intermediates\\exploded-aar\\Inspection-release\\res\\drawable\\icon_menu.png"
-    },
-    {
         "merged": "C:\\home\\robotics\\Documents\\robotics\\FtcRobotController\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\black_border.xml",
         "source": "C:\\home\\robotics\\Documents\\robotics\\FtcRobotController\\build\\intermediates\\exploded-aar\\Blocks-release\\res\\drawable\\black_border.xml"
     },
@@ -24,12 +16,20 @@
         "source": "C:\\home\\robotics\\Documents\\robotics\\FtcRobotController\\build\\intermediates\\exploded-aar\\Inspection-release\\res\\drawable\\icon_menu.png"
     },
     {
+        "merged": "C:\\home\\robotics\\Documents\\robotics\\C:\\Users\\Mark\\Documents\\8902-Robotics\\FtcRobotController\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\button_shape.xml",
+        "source": "C:\\home\\robotics\\Documents\\robotics\\C:\\Users\\Mark\\Documents\\8902-Robotics\\FtcRobotController\\build\\intermediates\\exploded-aar\\FtcCommon-release\\res\\drawable\\button_shape.xml"
+    },
+    {
+        "merged": "C:\\home\\robotics\\Documents\\robotics\\FtcRobotController\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\button_shape.xml",
+        "source": "C:\\home\\robotics\\Documents\\robotics\\FtcRobotController\\build\\intermediates\\exploded-aar\\FtcCommon-release\\res\\drawable\\button_shape.xml"
+    },
+    {
         "merged": "C:\\home\\robotics\\Documents\\robotics\\C:\\Users\\Mark\\Documents\\8902-Robotics\\FtcRobotController\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\black_border.xml",
         "source": "C:\\home\\robotics\\Documents\\robotics\\C:\\Users\\Mark\\Documents\\8902-Robotics\\FtcRobotController\\build\\intermediates\\exploded-aar\\Blocks-release\\res\\drawable\\black_border.xml"
     },
     {
-        "merged": "C:\\home\\robotics\\Documents\\robotics\\C:\\Users\\Mark\\Documents\\8902-Robotics\\FtcRobotController\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\icon_menu.png",
-        "source": "C:\\home\\robotics\\Documents\\robotics\\C:\\Users\\Mark\\Documents\\8902-Robotics\\FtcRobotController\\build\\intermediates\\exploded-aar\\Inspection-release\\res\\drawable\\icon_menu.png"
+        "merged": "C:\\Users\\Robotics\\Documents\\Robotics\\FtcRobotController\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\icon_menu.png",
+        "source": "C:\\Users\\Robotics\\Documents\\Robotics\\FtcRobotController\\build\\intermediates\\exploded-aar\\Inspection-release\\res\\drawable\\icon_menu.png"
     },
     {
         "merged": "C:\\Users\\Robotics\\Documents\\Robotics\\FtcRobotController\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\button_shape.xml",
@@ -40,8 +40,8 @@
         "source": "C:\\Users\\Robotics\\Documents\\Robotics\\FtcRobotController\\build\\intermediates\\exploded-aar\\Blocks-release\\res\\drawable\\black_border.xml"
     },
     {
-        "merged": "C:\\home\\robotics\\Documents\\robotics\\C:\\Users\\Mark\\Documents\\8902-Robotics\\FtcRobotController\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\button_shape.xml",
-        "source": "C:\\home\\robotics\\Documents\\robotics\\C:\\Users\\Mark\\Documents\\8902-Robotics\\FtcRobotController\\build\\intermediates\\exploded-aar\\FtcCommon-release\\res\\drawable\\button_shape.xml"
+        "merged": "C:\\home\\robotics\\Documents\\robotics\\C:\\Users\\Mark\\Documents\\8902-Robotics\\FtcRobotController\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\icon_menu.png",
+        "source": "C:\\home\\robotics\\Documents\\robotics\\C:\\Users\\Mark\\Documents\\8902-Robotics\\FtcRobotController\\build\\intermediates\\exploded-aar\\Inspection-release\\res\\drawable\\icon_menu.png"
     },
     {
         "merged": "C:\\home\\robotics\\Documents\\robotics\\FtcRobotController\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\icon_robotcontroller.png",

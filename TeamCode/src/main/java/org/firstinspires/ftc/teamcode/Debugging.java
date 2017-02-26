@@ -26,7 +26,6 @@ public class Debugging extends OpMode {
 
     private ColorSensor colorSensor;
     private OpticalDistanceSensor ods;
-    private HiTechnicNxtLightSensor lightSensor;
     private Servo colorServo;
     private Servo odsServo;
 
@@ -45,8 +44,6 @@ public class Debugging extends OpMode {
         ods = hardwareMap.opticalDistanceSensor.get("distanceSensor");
         colorServo = hardwareMap.servo.get("colorServo");
         odsServo = hardwareMap.servo.get("odsServo");
-        lightSensor = (HiTechnicNxtLightSensor) hardwareMap.get("lightSensor");
-        lightSensor.enableLed(true);
 
         motors.add(backLeft);
         motors.add(backRight);
@@ -185,9 +182,6 @@ public class Debugging extends OpMode {
         telemetry.addData("Alpha", colorSensor.alpha());
         telemetry.addData("Color Servo", colorServo.getPosition());
         telemetry.addData("ODS Servo", odsServo.getPosition());
-        telemetry.addData("Light", lightSensor.getLightDetected());
-        telemetry.addData("Raw Light", lightSensor.getRawLightDetected());
-        telemetry.addData("Raw Max", lightSensor.getRawLightDetectedMax());
 
         for (DcMotor m : motors) {
             telemetry.addData(m.getDeviceName(), m.getPower());

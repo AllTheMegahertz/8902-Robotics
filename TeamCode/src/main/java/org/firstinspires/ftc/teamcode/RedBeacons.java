@@ -16,7 +16,7 @@ import java.util.ArrayList;
 /**
  * Created by Mark on 2/21/2017.
  */
-@Autonomous(name = "Red Beacon", group = "default")
+@Autonomous(name = "Red Beacon", group = "red")
 public class RedBeacons extends LinearOpMode {
 
     private ColorSensor colorSensor;
@@ -34,6 +34,7 @@ public class RedBeacons extends LinearOpMode {
     //Variables
     private boolean pushed = false;
     private boolean last = false;
+    private boolean first = true;
     private int direction;
     private double runningTime = 0;
 
@@ -56,7 +57,7 @@ public class RedBeacons extends LinearOpMode {
     //Checks using the ODS for a wall
     private boolean wall() {
 
-        return ods.getLightDetected() >= 0.005;
+        return ods.getLightDetected() >= 0.0035;
 
     }
 
@@ -66,7 +67,7 @@ public class RedBeacons extends LinearOpMode {
         int r = colorSensor.red();
         int b = colorSensor.blue();
 
-        return r >= 3 && r > b;
+        return r >= 4 && r > b;
 
     }
 
@@ -91,6 +92,8 @@ public class RedBeacons extends LinearOpMode {
 
         //Gets sensors out of the way
         retract();
+        main.move(0, 0, motors);
+        sleep(300);
 
         if (!pushed) {
             pushed = true;
@@ -116,7 +119,7 @@ public class RedBeacons extends LinearOpMode {
         }
 
         if (!last) {
-            main.move(3, 1, motors);
+            main.move(2, 1, motors);
             sleep(500);
             main.move(0, 0, motors);
         }
@@ -138,36 +141,28 @@ public class RedBeacons extends LinearOpMode {
 
     }
 
-    private void goLeftForBeacon() {
+    private boolean close() {
 
-
-        main.move(2, 0.2, motors);
-        sleep(100);
-
-        if (color()) {
-            push();
-        }
-        else {
-            main.move(3, 0.2, motors);
-            sleep(200);
-            if (color()) {
-                push();
-            }
-        }
+        return ods.getLightDetected() >= 0.05;
 
     }
 
     private void goRightForBeacon() {
 
+        resetTime();
+
         while (!color()) {
             sensors();
 
-            if (!wall()) {
+            while (close()) {
+                main.move(1, 0.1, motors);
+            }
+
+            while (!wall()) {
                 main.move(0, 0.1, motors);
             }
-            else {
-                main.move(3, 0.2, motors);
-            }
+
+            main.move(3, 0.2, motors);
         }
 
         push();
@@ -223,9 +218,9 @@ public class RedBeacons extends LinearOpMode {
         main.move(0, 1, motors);
         sleep(1500);
         main.turn(0, 1, motors);
-        sleep(450);
+        sleep(400);
         main.move(0, 1, motors);
-        sleep(450);
+        sleep(500);
         //Extends ODS
         extend();
         sleep(250);
@@ -285,6 +280,8 @@ public class RedBeacons extends LinearOpMode {
         */
 
         goRightForBeacon();
+        first = false;
+        last = true;
 
         //Resets, and prepares to push the next beacon
         pushed = false;
@@ -292,6 +289,17 @@ public class RedBeacons extends LinearOpMode {
         //Moves to the left, staying the correct distance from the wall, and presses the beacon when it is in front of the correct color
         goRightForBeacon();
         pushed = false;
+
+        retract();
+
+        main.move(2, 1, motors);
+        sleep(500);
+
+        main.move(1, 1, motors);
+        sleep(500);
+
+
+        /*
 
         //Turns the robot to go for the next two beacons
         main.turn(1, 1, motors);
@@ -318,13 +326,13 @@ public class RedBeacons extends LinearOpMode {
         //Stores current time to know how long the robot must travel to come back
 
         //Ready to continue. Goes for first beacon on the right.
-        goRightForBeacon();
+        goLeftForBeacon();
         pushed = false;
 
         last = true;
 
         //Goes for second beacon on the right
-        goRightForBeacon();
+        goLeftForBeacon();
 
         //Retracts servos
 
@@ -349,6 +357,7 @@ public class RedBeacons extends LinearOpMode {
 
         //Stops
         main.move(0, 0, motors);
+        */
     }
 
 }

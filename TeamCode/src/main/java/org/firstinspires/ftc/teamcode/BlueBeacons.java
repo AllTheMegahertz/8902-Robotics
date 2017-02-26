@@ -1,23 +1,22 @@
 package org.firstinspires.ftc.teamcode;
 
+import android.media.MediaPlayer;
+
+import com.qualcomm.hardware.hitechnic.HiTechnicNxtColorSensor;
+import com.qualcomm.hardware.hitechnic.HiTechnicNxtLightSensor;
 import com.qualcomm.robotcore.eventloop.opmode.Autonomous;
 import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
-import com.qualcomm.robotcore.eventloop.opmode.OpMode;
 import com.qualcomm.robotcore.hardware.ColorSensor;
 import com.qualcomm.robotcore.hardware.DcMotor;
 import com.qualcomm.robotcore.hardware.OpticalDistanceSensor;
 import com.qualcomm.robotcore.hardware.Servo;
-import com.qualcomm.robotcore.util.ElapsedTime;
 
-import org.firstinspires.ftc.teamcode.main;
-
-import java.lang.reflect.Method;
 import java.util.ArrayList;
 
 /**
  * Created by Mark on 2/21/2017.
  */
-@Autonomous(name = "Blue Beacon", group = "default")
+@Autonomous(name = "Blue Beacon", group = "blue")
 public class BlueBeacons extends LinearOpMode {
 
     private ColorSensor colorSensor;
@@ -34,6 +33,8 @@ public class BlueBeacons extends LinearOpMode {
 
     //Variables
     private boolean pushed = false;
+    private boolean last = false;
+    private boolean first = true;
     private int direction;
     private double runningTime = 0;
 
@@ -43,10 +44,20 @@ public class BlueBeacons extends LinearOpMode {
     private int b;
     private double distance;
 
+    private void retract() {
+        colorServo.setPosition(1);
+        odsServo.setPosition(1);
+    }
+
+    private void extend() {
+        colorServo.setPosition(0.125);
+        odsServo.setPosition(0.3);
+    }
+
     //Checks using the ODS for a wall
     private boolean wall() {
 
-        return ods.getLightDetected() >= 0.005;
+        return ods.getLightDetected() >= 0.0035;
 
     }
 
@@ -56,7 +67,7 @@ public class BlueBeacons extends LinearOpMode {
         int r = colorSensor.red();
         int b = colorSensor.blue();
 
-        return b >= 2 && b > r;
+        return b >= 4 && b > r;
 
     }
 
@@ -67,7 +78,7 @@ public class BlueBeacons extends LinearOpMode {
         g = colorSensor.green();
         b = colorSensor.blue();
 
-        return r + g + b == 0;
+        return r < 4 && b < 4;
 
     }
 
@@ -79,20 +90,27 @@ public class BlueBeacons extends LinearOpMode {
     //Pushes beacon
     private void push() {
 
-        sensors();
+        //Gets sensors out of the way
+        retract();
+        main.move(0, 0, motors);
+        sleep(300);
 
         if (!pushed) {
             pushed = true;
             resetTime();
         }
 
-        //Gets sensors out of the way
-        odsServo.setPosition(0.5);
-        colorServo.setPosition(0.5);
 
         //Moves forward for 0.5 seconds
-        main.move(0, 0.1, motors);
+        main.move(0, 0.2, motors);
         sleep(500);
+
+        //Moves back
+        main.move(1, 0.2, motors);
+        sleep(200);
+
+        //Restores servos
+        extend();
 
         //Moves back until wall no longer detected
         while (wall()) {
@@ -100,20 +118,11 @@ public class BlueBeacons extends LinearOpMode {
             main.move(1, 0.1, motors);
         }
 
-        //Moves forward until wall detected, plus 0.1 seconds
-        while (!wall()) {
-            sensors();
-            main.move(0, 0.1, motors);
+        if (!last) {
+            main.move(2, 1, motors);
+            sleep(500);
+            main.move(0, 0, motors);
         }
-
-        //Restores servos
-        odsServo.setPosition(1.0);
-        colorServo.setPosition(1.0);
-
-        sleep(100);
-        main.move(0, 0, motors);
-
-
     }
 
     //Acquires Sensor data
@@ -124,6 +133,7 @@ public class BlueBeacons extends LinearOpMode {
         g = colorSensor.green();
         b = colorSensor.blue();
 
+
         telemetry.addData("distance", distance);
         telemetry.addData("Red", r);
         telemetry.addData("Green", g);
@@ -131,17 +141,31 @@ public class BlueBeacons extends LinearOpMode {
 
     }
 
+    private boolean close() {
+
+        return ods.getLightDetected() >= 0.05;
+
+    }
+
     private void goLeftForBeacon() {
+
+        resetTime();
 
         while (!color()) {
             sensors();
 
-            if (color()) {
-                push();
+            while (close()) {
+                main.move(1, 0.1, motors);
             }
 
-            main.move(2, 0.1, motors);
+            while (!wall() && !first) {
+                main.move(0, 0.1, motors);
+            }
+
+            main.move(2, 0.2, motors);
         }
+
+        push();
 
     }
 
@@ -154,6 +178,13 @@ public class BlueBeacons extends LinearOpMode {
         backRight = hardwareMap.dcMotor.get("backRight");
         frontLeft = hardwareMap.dcMotor.get("frontLeft");
         frontRight = hardwareMap.dcMotor.get("frontRight");
+
+
+
+        for (DcMotor m : motors) {
+            m.setMode(DcMotor.RunMode.STOP_AND_RESET_ENCODER);
+            m.setMode(DcMotor.RunMode.RUN_USING_ENCODER);
+        }
 
         //Initializes Servos
         colorServo = hardwareMap.servo.get("colorServo");
@@ -173,10 +204,9 @@ public class BlueBeacons extends LinearOpMode {
         colorSensor.enableLed(false);
 
         //Makes sure the sensors are retracted
-        colorServo.setPosition(0.5);
-        odsServo.setPosition(0.5);
+        retract();
 
-        resetTime();
+        resetStartTime();
         waitForStart();
 
         //Running Code
@@ -186,49 +216,51 @@ public class BlueBeacons extends LinearOpMode {
 
         //Starts from starting position, finds wall
         main.move(0, 1, motors);
-        sleep(1300);
+        sleep(1500);
         main.turn(1, 1, motors);
-        sleep(475);
-        main.move(0, 1, motors);
         sleep(450);
+        main.move(0, 1, motors);
+        sleep(600);
         //Extends ODS
-        odsServo.setPosition(1.0);
+        extend();
+        sleep(250);
 
         while (!wall()) {
             sensors();
-            main.move(0, 0.1, motors);
+            main.move(0, 0.2, motors);
         }
 
-        //Extends color sensor
-        colorServo.setPosition(1.0);
+        main.move(0, 0, motors);
 
         resetTime();
         //Wall found, moves left until beacon is found, and pushes if it is the right color
-
-        while (!color() && noColor()) {
+        /*
+        while (noColor() && !color() && !pushed) {
             sensors();
+
+            if (!wall()) {
+                main.move(0, 0.1, motors);
+            }
+            else {
+                if (getRuntime() <= 1.5) {
+                    main.move(3, 0.1, motors);
+                    direction = 1;
+                }
+                else {
+                    main.move(2, 0.1, motors);
+                    direction = 0;
+                }
+            }
 
             if (color()) {
                 push();
             }
-            else if (!wall()) {
-                main.move(0, 0.1, motors);
-            }
-            else {
-                if (getRuntime() < 1) {
-                    main.move(2, 0.1, motors);
-                    direction = 0;
-                }
-                else {
-                    main.move(3, 0.1, motors);
-                    direction = 1;
-                }
-            }
+
         }
 
         //If the beacon hasn't been pushed, but the robot has found the beacon
         if (!pushed) {
-            while (!color()) {
+            while (!pushed) {
                 sensors();
 
                 if (color()) {
@@ -245,57 +277,86 @@ public class BlueBeacons extends LinearOpMode {
 
             }
         }
+        */
+
+        goLeftForBeacon();
+        first = false;
+        last = true;
 
         //Resets, and prepares to push the next beacon
         pushed = false;
-        main.move(2, 0.5, motors);
-        sleep(300);
 
         //Moves to the left, staying the correct distance from the wall, and presses the beacon when it is in front of the correct color
         goLeftForBeacon();
         pushed = false;
 
+        retract();
+
+        main.move(3, 1, motors);
+        sleep(500);
+
+        main.move(1, 1, motors);
+        sleep(500);
+
+        /*
+
         //Turns the robot to go for the next two beacons
-        main.turn(0, 1, motors);
-        sleep(475);
+        main.turn(1, 1, motors);
+        sleep(450);
         main.turn(0, 0, motors);
 
         //Makes sure 10 seconds have passed
         while (getRuntime() + runningTime <= 10);
 
+        //Squares up against the wall
+        retract();
+        main.move(0, 0.5, motors);
+        sleep(1500);
+
+        main.move(1, 1, motors);
+        sleep(300);
+
+        extend();
+
+        while (wall()) {
+            main.move(1, 0.2, motors);
+        }
+
         //Stores current time to know how long the robot must travel to come back
-        double time = getRuntime();
 
         //Ready to continue. Goes for first beacon on the right.
         goLeftForBeacon();
         pushed = false;
 
+        last = true;
+
         //Goes for second beacon on the right
         goLeftForBeacon();
 
-        double time2 = (getRuntime() - time) * 100;
+        //Retracts servos
 
-        long timeL = (long) time2;
-
-        //Comes back to where robot was before previous two beacons
-        main.move(3, 1, motors);
-        sleep(timeL);
-
-        //Moves back to near the first beacon
+        //Backs up for 0.75 seconds
         main.move(1, 1, motors);
-        sleep((long) (time2*0.75));
+        sleep(750);
 
-        //Move in front of the center goal
-        main.move(2, 1, motors);
-        sleep((long) (time2/2));
+        //Turns to the left
+        main.turn(0, 1, motors);
+        sleep(450);
 
-        //Move the ball and park on the goal
-        odsServo.setPosition(0.5);
-        colorServo.setPosition(0.5);
+        //Moves forward for 1 second
         main.move(0, 1, motors);
-        sleep(500);
-        main.move(0, 0, motors);
+        sleep(1000);
 
+        //Moves left for 0.5 seconds
+        main.move(2, 1, motors);
+
+        //Moves backward for 0.4 seconds, pushing the ball off of the center goal and parks on goal
+        main.move(1, 1, motors);
+        sleep(400);
+
+        //Stops
+        main.move(0, 0, motors);
+        */
     }
 
 }

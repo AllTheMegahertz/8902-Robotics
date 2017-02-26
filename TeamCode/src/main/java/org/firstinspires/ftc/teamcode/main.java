@@ -56,8 +56,8 @@ public class main {
 
             m.get(0).setPower(p*d);
             m.get(1).setPower(p*d);
-            m.get(2).setPower(-0.85 * p*d);
-            m.get(3).setPower(-0.85 * p*d);
+            m.get(2).setPower(-0.825 * p*d);
+            m.get(3).setPower(-0.825 * p*d);
 
         }
 
