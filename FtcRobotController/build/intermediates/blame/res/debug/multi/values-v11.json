@@ -1,6 +1,6 @@
 [
     {
-        "outputFile": "/home/robotics/Downloads/ftc_app-master/FtcRobotController/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v11/values-v11.xml",
+        "outputFile": "C:\\home\\robotics\\Documents\\robotics\\C:\\Users\\Mark\\Documents\\8902-Robotics\\FtcRobotController\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v11\\values-v11.xml",
         "map": [
             {
                 "to": {
@@ -12,7 +12,7 @@
                     "endOffset": 187
                 },
                 "from": {
-                    "file": "/home/robotics/Downloads/ftc_app-master/FtcRobotController/src/main/res/values-v11/styles.xml",
+                    "file": "C:\\home\\robotics\\Documents\\robotics\\C:\\Users\\Mark\\Documents\\8902-Robotics\\FtcRobotController\\src\\main\\res\\values-v11\\styles.xml",
                     "position": {
                         "startLine": 39,
                         "startColumn": 4,
@@ -20,6 +20,58 @@
                         "endLine": 41,
                         "endColumn": 12,
                         "endOffset": 1958
+                    }
+                }
+            }
+        ]
+    },
+    {
+        "outputFile": "C:\\home\\robotics\\Documents\\robotics\\FtcRobotController\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v11\\values-v11.xml",
+        "map": [
+            {
+                "to": {
+                    "startLine": 2,
+                    "startColumn": 4,
+                    "startOffset": 55,
+                    "endLine": 4,
+                    "endColumn": 12,
+                    "endOffset": 187
+                },
+                "from": {
+                    "file": "C:\\home\\robotics\\Documents\\robotics\\FtcRobotController\\src\\main\\res\\values-v11\\styles.xml",
+                    "position": {
+                        "startLine": 39,
+                        "startColumn": 4,
+                        "startOffset": 1826,
+                        "endLine": 41,
+                        "endColumn": 12,
+                        "endOffset": 1958
+                    }
+                }
+            }
+        ]
+    },
+    {
+        "outputFile": "C:\\Users\\Robotics\\Documents\\Robotics\\FtcRobotController\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v11\\values-v11.xml",
+        "map": [
+            {
+                "to": {
+                    "startLine": 2,
+                    "startColumn": 4,
+                    "startOffset": 55,
+                    "endLine": 4,
+                    "endColumn": 12,
+                    "endOffset": 187
+                },
+                "from": {
+                    "file": "C:\\Users\\Robotics\\Documents\\Robotics\\FtcRobotController\\src\\main\\res\\values-v11\\styles.xml",
+                    "position": {
+                        "startLine": 39,
+                        "startColumn": 4,
+                        "startOffset": 1865,
+                        "endLine": 41,
+                        "endColumn": 12,
+                        "endOffset": 1999
                     }
                 }
             }

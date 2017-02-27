@@ -1,10 +1,26 @@
 [
     {
-        "merged": "/home/robotics/Downloads/ftc_app-master/FtcRobotController/build/intermediates/res/merged/release/drawable-hdpi-v4/ic_launcher.png",
-        "source": "/home/robotics/Downloads/ftc_app-master/FtcRobotController/src/main/res/drawable-hdpi/ic_launcher.png"
+        "merged": "C:\\Users\\Robotics\\Documents\\Robotics\\FtcRobotController\\build\\intermediates\\res\\merged\\release\\drawable-hdpi-v4\\button_shape.xml",
+        "source": "C:\\Users\\Robotics\\Documents\\Robotics\\FtcRobotController\\build\\intermediates\\exploded-aar\\FtcCommon-release\\res\\drawable-hdpi-v4\\button_shape.xml"
     },
     {
-        "merged": "/home/robotics/Downloads/ftc_app-master/FtcRobotController/build/intermediates/res/merged/release/drawable-hdpi-v4/button_shape.xml",
-        "source": "/home/robotics/Downloads/ftc_app-master/FtcRobotController/build/intermediates/exploded-aar/FtcCommon-release/res/drawable-hdpi-v4/button_shape.xml"
+        "merged": "C:\\Users\\Robotics\\Documents\\Robotics\\FtcRobotController\\build\\intermediates\\res\\merged\\release\\drawable-hdpi-v4\\ic_launcher.png",
+        "source": "C:\\Users\\Robotics\\Documents\\Robotics\\FtcRobotController\\src\\main\\res\\drawable-hdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\home\\robotics\\Documents\\8902-Robotics-testing\\FtcRobotController\\build\\intermediates\\res\\merged\\release\\drawable-hdpi-v4\\button_shape.xml",
+        "source": "C:\\home\\robotics\\Documents\\8902-Robotics-testing\\FtcRobotController\\build\\intermediates\\exploded-aar\\FtcCommon-release\\res\\drawable-hdpi-v4\\button_shape.xml"
+    },
+    {
+        "merged": "C:\\home\\robotics\\Documents\\robotics\\FtcRobotController\\build\\intermediates\\res\\merged\\release\\drawable-hdpi-v4\\button_shape.xml",
+        "source": "C:\\home\\robotics\\Documents\\robotics\\FtcRobotController\\build\\intermediates\\exploded-aar\\FtcCommon-release\\res\\drawable-hdpi-v4\\button_shape.xml"
+    },
+    {
+        "merged": "C:\\home\\robotics\\Documents\\robotics\\FtcRobotController\\build\\intermediates\\res\\merged\\release\\drawable-hdpi-v4\\ic_launcher.png",
+        "source": "C:\\home\\robotics\\Documents\\robotics\\FtcRobotController\\src\\main\\res\\drawable-hdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\home\\robotics\\Documents\\8902-Robotics-testing\\FtcRobotController\\build\\intermediates\\res\\merged\\release\\drawable-hdpi-v4\\ic_launcher.png",
+        "source": "C:\\home\\robotics\\Documents\\8902-Robotics-testing\\FtcRobotController\\src\\main\\res\\drawable-hdpi\\ic_launcher.png"
     }
 ]

@@ -32,34 +32,30 @@ THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
 package org.firstinspires.ftc.teamcode;
 
-import android.media.AudioManager;
-import android.media.MediaPlayer;
-import android.media.SoundPool;
 
 import java.lang.Math;
 import java.util.ArrayList;
 
-import com.qualcomm.robotcore.eventloop.opmode.Disabled;
-import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
 import com.qualcomm.robotcore.eventloop.opmode.OpMode;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 import com.qualcomm.robotcore.hardware.DcMotor;
-import com.qualcomm.robotcore.hardware.DcMotorController;
-import com.qualcomm.robotcore.util.ElapsedTime;
+import com.qualcomm.robotcore.hardware.Servo;
 
-//Latest Revision - 01/18/2017 - Mark Vadeika
+//Latest Revision - 02/21/2017 - Mark Vadeika
 
-@TeleOp(name="K9bot: Telop Tank", group="K9bot")
+@TeleOp(name="Manual", group="default")
 
 public class K9botTeleopTank_Linear extends OpMode {
 
-    private DcMotorController motorController;
     private DcMotor backLeft;
     private DcMotor backRight;
     private DcMotor frontLeft;
     private DcMotor frontRight;
 
-    boolean forward = true;
+    private Servo colorServo;
+    private Servo odsServo;
+
+    private boolean forward = true;
 
     @Override
     public void init() {
@@ -67,15 +63,14 @@ public class K9botTeleopTank_Linear extends OpMode {
         backRight = hardwareMap.dcMotor.get("backRight");
         frontLeft = hardwareMap.dcMotor.get("frontLeft");
         frontRight = hardwareMap.dcMotor.get("frontRight");
+
+        colorServo = hardwareMap.servo.get("colorServo");
+        odsServo = hardwareMap.servo.get("odsServo");
+
+        colorServo.setPosition(1);
+        odsServo.setPosition(1);
     }
 
-    HardwareK9bot robot = new HardwareK9bot();
-
-
-
-    public K9botTeleopTank_Linear() {
-        super();
-    }
 
     @Override
     public void loop() {
@@ -111,8 +106,8 @@ public class K9botTeleopTank_Linear extends OpMode {
         }
 
 
-        //Assigns each motor power. I know, it's inneficient.
-        ArrayList<Double> wheels = new ArrayList<Double>();
+        //Assigns each motor power. I know, it's inefficient.
+        ArrayList<Double> wheels = new ArrayList<>();
 
         double bl = lsy + lsx;
         double br = rsy + rsx;
@@ -124,7 +119,7 @@ public class K9botTeleopTank_Linear extends OpMode {
         wheels.add(fl);
         wheels.add(fr);
 
-        //Creates deadzone
+        //Creates dead zone
         for (double i : wheels) {
             if (Math.abs(i) <= 0.1) {
                 i = 0;

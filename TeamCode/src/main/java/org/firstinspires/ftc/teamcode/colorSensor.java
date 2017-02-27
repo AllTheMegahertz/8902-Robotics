@@ -1,6 +1,7 @@
 package org.firstinspires.ftc.teamcode;
 
 import com.qualcomm.robotcore.eventloop.opmode.Autonomous;
+import com.qualcomm.robotcore.eventloop.opmode.Disabled;
 import com.qualcomm.robotcore.eventloop.opmode.OpMode;
 import com.qualcomm.robotcore.hardware.ColorSensor;
 import com.qualcomm.robotcore.hardware.DcMotor;
@@ -14,7 +15,7 @@ import java.util.ArrayList;
 /**
  * Created by robotics on 11/17/16.
  */
-
+@Disabled
 @Autonomous(name = "Sensor: MR Color", group = "Autonomous")
 public class colorSensor extends OpMode {
 

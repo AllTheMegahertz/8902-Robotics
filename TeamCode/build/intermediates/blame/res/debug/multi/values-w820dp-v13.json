@@ -1,6 +1,6 @@
 [
     {
-        "outputFile": "/home/robotics/Downloads/ftc_app-master/TeamCode/build/intermediates/incremental/mergeDebugResources/merged.dir/values-w820dp-v13/values-w820dp-v13.xml",
+        "outputFile": "C:\\Users\\Robotics\\Documents\\Robotics\\TeamCode\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-w820dp-v13\\values-w820dp-v13.xml",
         "map": [
             {
                 "to": {
@@ -11,7 +11,7 @@
                     "endOffset": 108
                 },
                 "from": {
-                    "file": "/home/robotics/Downloads/ftc_app-master/TeamCode/build/intermediates/exploded-aar/ftc_app-master/FtcRobotController/unspecified/res/values-w820dp-v13/values-w820dp-v13.xml",
+                    "file": "C:\\Users\\Robotics\\Documents\\Robotics\\TeamCode\\build\\intermediates\\exploded-aar\\Robotics\\FtcRobotController\\unspecified\\res\\values-w820dp-v13\\values-w820dp-v13.xml",
                     "position": {
                         "startLine": 2,
                         "startColumn": 4,

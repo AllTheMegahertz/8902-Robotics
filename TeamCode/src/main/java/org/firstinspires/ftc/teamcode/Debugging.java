@@ -1,5 +1,7 @@
 package org.firstinspires.ftc.teamcode;
 
+import com.qualcomm.hardware.hitechnic.HiTechnicNxtColorSensor;
+import com.qualcomm.hardware.hitechnic.HiTechnicNxtLightSensor;
 import com.qualcomm.robotcore.eventloop.opmode.Autonomous;
 import com.qualcomm.robotcore.eventloop.opmode.OpMode;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
@@ -23,11 +25,11 @@ public class Debugging extends OpMode {
     private DcMotor frontRight;
 
     private ColorSensor colorSensor;
-    private TouchSensor touchSensor;
     private OpticalDistanceSensor ods;
-    private Servo servo;
+    private Servo colorServo;
+    private Servo odsServo;
 
-    private boolean forward;
+    private boolean forward = true;
 
     private ArrayList<DcMotor> motors = new ArrayList<>();
 
@@ -39,18 +41,24 @@ public class Debugging extends OpMode {
         frontLeft = hardwareMap.dcMotor.get("frontLeft");
         frontRight = hardwareMap.dcMotor.get("frontRight");
         colorSensor = hardwareMap.colorSensor.get("colorSensor");
-        touchSensor = hardwareMap.touchSensor.get("touchSensor");
         ods = hardwareMap.opticalDistanceSensor.get("distanceSensor");
-        servo = hardwareMap.servo.get("servo");
+        colorServo = hardwareMap.servo.get("colorServo");
+        odsServo = hardwareMap.servo.get("odsServo");
 
         motors.add(backLeft);
         motors.add(backRight);
         motors.add(frontLeft);
         motors.add(frontRight);
 
+        for (DcMotor m : motors) {
+            m.setMode(DcMotor.RunMode.STOP_AND_RESET_ENCODER);
+            m.setMode(DcMotor.RunMode.RUN_USING_ENCODER);
+        }
+
         colorSensor.enableLed(false);
 
-        servo.setPosition(0);
+        colorServo.setPosition(0);
+        odsServo.setPosition(0);
 
     }
 
@@ -60,20 +68,34 @@ public class Debugging extends OpMode {
         double lsx = -gamepad1.left_stick_x;
         double rsy = gamepad1.right_stick_y;
         double rsx = -gamepad1.right_stick_x;
+        float lt = gamepad1.left_trigger;
+        float rt = gamepad1.right_trigger;
         boolean start = gamepad1.start;
         boolean back = gamepad1.back;
         boolean lb = gamepad1.left_bumper;
         boolean rb = gamepad1.right_bumper;
 
         if (lb) {
-            if (servo.getPosition() < 1) {
-                servo.setPosition(servo.getPosition() + 0.05);
+            if (colorServo.getPosition() < 1) {
+                colorServo.setPosition(colorServo.getPosition() + 0.025);
             }
         }
 
         if (rb) {
-            if (servo.getPosition() > 0) {
-                servo.setPosition(servo.getPosition() - 0.05);
+            if (colorServo.getPosition() > 0) {
+                colorServo.setPosition(colorServo.getPosition() - 0.025);
+            }
+        }
+
+        if (lt > 0) {
+            if (odsServo.getPosition() < 1) {
+                odsServo.setPosition(odsServo.getPosition() + 0.025);
+            }
+        }
+
+        if (rt > 0) {
+            if (odsServo.getPosition() > 0) {
+                odsServo.setPosition(odsServo.getPosition() - 0.025);
             }
         }
 
@@ -152,12 +174,14 @@ public class Debugging extends OpMode {
 
         //Sends telemetry for debugging
         telemetry.addData("Time", getRuntime());
-        telemetry.addData("Pressed", touchSensor.isPressed());
         telemetry.addData("Distance", ods.getLightDetected());
+        telemetry.addData("Distance Raw", ods.getRawLightDetected());
         telemetry.addData("Red", colorSensor.red());
         telemetry.addData("Green", colorSensor.green());
         telemetry.addData("Blue", colorSensor.blue());
-        telemetry.addData("Servo", servo.getPosition());
+        telemetry.addData("Alpha", colorSensor.alpha());
+        telemetry.addData("Color Servo", colorServo.getPosition());
+        telemetry.addData("ODS Servo", odsServo.getPosition());
 
         for (DcMotor m : motors) {
             telemetry.addData(m.getDeviceName(), m.getPower());

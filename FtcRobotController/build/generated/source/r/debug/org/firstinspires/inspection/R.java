@@ -85,9 +85,9 @@ public final class R {
 		public static int color_fragment_shader = 0x7f060002;
 		public static int cube_mesh_fragment_shader = 0x7f060003;
 		public static int cube_mesh_vertex_shader = 0x7f060004;
-		public static int simple_vertex_shader = 0x7f060007;
-		public static int texture_fragment_shader = 0x7f060008;
-		public static int texture_vertex_shader = 0x7f060009;
+		public static int simple_vertex_shader = 0x7f06000a;
+		public static int texture_fragment_shader = 0x7f06000c;
+		public static int texture_vertex_shader = 0x7f06000d;
 	}
 	public static final class string {
 		public static int VUFORIA_INIT_ERROR_DEVICE_NOT_SUPPORTED = 0x7f0b0000;

@@ -1,6 +1,7 @@
 package org.firstinspires.ftc.teamcode;
 
 import com.qualcomm.robotcore.eventloop.opmode.Autonomous;
+import com.qualcomm.robotcore.eventloop.opmode.Disabled;
 import com.qualcomm.robotcore.eventloop.opmode.OpMode;
 import com.qualcomm.robotcore.hardware.ColorSensor;
 import com.qualcomm.robotcore.hardware.DcMotor;
@@ -12,7 +13,7 @@ import java.util.ArrayList;
 /**
  * Created by Mark on 2/18/2017.
  */
-
+@Disabled
 @Autonomous(name = "Auto Beacons", group = "default")
 public class AutoBeacons2 extends OpMode {
 

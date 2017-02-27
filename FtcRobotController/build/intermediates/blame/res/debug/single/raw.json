@@ -1,46 +1,182 @@
 [
     {
-        "merged": "/home/robotics/Downloads/ftc_app-master/FtcRobotController/build/intermediates/res/merged/debug/raw/color_fragment_shader.glsl",
-        "source": "/home/robotics/Downloads/ftc_app-master/FtcRobotController/build/intermediates/exploded-aar/RobotCore-release/res/raw/color_fragment_shader.glsl"
+        "merged": "C:\\home\\robotics\\Documents\\robotics\\FtcRobotController\\build\\intermediates\\res\\merged\\debug\\raw\\guy.wav",
+        "source": "C:\\home\\robotics\\Documents\\robotics\\FtcRobotController\\src\\main\\res\\raw\\guy.wav"
     },
     {
-        "merged": "/home/robotics/Downloads/ftc_app-master/FtcRobotController/build/intermediates/res/merged/debug/raw/nxtstartupsound.wav",
-        "source": "/home/robotics/Downloads/ftc_app-master/FtcRobotController/build/intermediates/exploded-aar/FtcCommon-release/res/raw/nxtstartupsound.wav"
+        "merged": "C:\\Users\\Robotics\\Documents\\Robotics\\FtcRobotController\\build\\intermediates\\res\\merged\\debug\\raw\\simple_vertex_shader.glsl",
+        "source": "C:\\Users\\Robotics\\Documents\\Robotics\\FtcRobotController\\build\\intermediates\\exploded-aar\\RobotCore-release\\res\\raw\\simple_vertex_shader.glsl"
     },
     {
-        "merged": "/home/robotics/Downloads/ftc_app-master/FtcRobotController/build/intermediates/res/merged/debug/raw/texture_fragment_shader.glsl",
-        "source": "/home/robotics/Downloads/ftc_app-master/FtcRobotController/build/intermediates/exploded-aar/RobotCore-release/res/raw/texture_fragment_shader.glsl"
+        "merged": "C:\\home\\robotics\\Documents\\robotics\\FtcRobotController\\build\\intermediates\\res\\merged\\debug\\raw\\simple_vertex_shader.glsl",
+        "source": "C:\\home\\robotics\\Documents\\robotics\\FtcRobotController\\build\\intermediates\\exploded-aar\\RobotCore-release\\res\\raw\\simple_vertex_shader.glsl"
     },
     {
-        "merged": "/home/robotics/Downloads/ftc_app-master/FtcRobotController/build/intermediates/res/merged/debug/raw/simple_vertex_shader.glsl",
-        "source": "/home/robotics/Downloads/ftc_app-master/FtcRobotController/build/intermediates/exploded-aar/RobotCore-release/res/raw/simple_vertex_shader.glsl"
+        "merged": "C:\\home\\robotics\\Documents\\robotics\\C:\\Users\\Mark\\Documents\\8902-Robotics\\FtcRobotController\\build\\intermediates\\res\\merged\\debug\\raw\\cube_mesh_vertex_shader.glsl",
+        "source": "C:\\home\\robotics\\Documents\\robotics\\C:\\Users\\Mark\\Documents\\8902-Robotics\\FtcRobotController\\build\\intermediates\\exploded-aar\\RobotCore-release\\res\\raw\\cube_mesh_vertex_shader.glsl"
     },
     {
-        "merged": "/home/robotics/Downloads/ftc_app-master/FtcRobotController/build/intermediates/res/merged/debug/raw/chimeconnect.wav",
-        "source": "/home/robotics/Downloads/ftc_app-master/FtcRobotController/build/intermediates/exploded-aar/FtcCommon-release/res/raw/chimeconnect.wav"
+        "merged": "C:\\home\\robotics\\Documents\\robotics\\C:\\Users\\Mark\\Documents\\8902-Robotics\\FtcRobotController\\build\\intermediates\\res\\merged\\debug\\raw\\guy.wav",
+        "source": "C:\\home\\robotics\\Documents\\robotics\\C:\\Users\\Mark\\Documents\\8902-Robotics\\FtcRobotController\\src\\main\\res\\raw\\guy.wav"
     },
     {
-        "merged": "/home/robotics/Downloads/ftc_app-master/FtcRobotController/build/intermediates/res/merged/debug/raw/cube_mesh_vertex_shader.glsl",
-        "source": "/home/robotics/Downloads/ftc_app-master/FtcRobotController/build/intermediates/exploded-aar/RobotCore-release/res/raw/cube_mesh_vertex_shader.glsl"
+        "merged": "C:\\home\\robotics\\Documents\\robotics\\FtcRobotController\\build\\intermediates\\res\\merged\\debug\\raw\\warningmessage.wav",
+        "source": "C:\\home\\robotics\\Documents\\robotics\\FtcRobotController\\build\\intermediates\\exploded-aar\\FtcCommon-release\\res\\raw\\warningmessage.wav"
     },
     {
-        "merged": "/home/robotics/Downloads/ftc_app-master/FtcRobotController/build/intermediates/res/merged/debug/raw/cube_mesh_fragment_shader.glsl",
-        "source": "/home/robotics/Downloads/ftc_app-master/FtcRobotController/build/intermediates/exploded-aar/RobotCore-release/res/raw/cube_mesh_fragment_shader.glsl"
+        "merged": "C:\\home\\robotics\\Documents\\robotics\\FtcRobotController\\build\\intermediates\\res\\merged\\debug\\raw\\nxtstartupsound.wav",
+        "source": "C:\\home\\robotics\\Documents\\robotics\\FtcRobotController\\build\\intermediates\\exploded-aar\\FtcCommon-release\\res\\raw\\nxtstartupsound.wav"
     },
     {
-        "merged": "/home/robotics/Downloads/ftc_app-master/FtcRobotController/build/intermediates/res/merged/debug/raw/chimedisconnect.wav",
-        "source": "/home/robotics/Downloads/ftc_app-master/FtcRobotController/build/intermediates/exploded-aar/FtcCommon-release/res/raw/chimedisconnect.wav"
+        "merged": "C:\\Users\\Robotics\\Documents\\Robotics\\FtcRobotController\\build\\intermediates\\res\\merged\\debug\\raw\\nxtstartupsound.wav",
+        "source": "C:\\Users\\Robotics\\Documents\\Robotics\\FtcRobotController\\build\\intermediates\\exploded-aar\\FtcCommon-release\\res\\raw\\nxtstartupsound.wav"
     },
     {
-        "merged": "/home/robotics/Downloads/ftc_app-master/FtcRobotController/build/intermediates/res/merged/debug/raw/texture_vertex_shader.glsl",
-        "source": "/home/robotics/Downloads/ftc_app-master/FtcRobotController/build/intermediates/exploded-aar/RobotCore-release/res/raw/texture_vertex_shader.glsl"
+        "merged": "C:\\Users\\Robotics\\Documents\\Robotics\\FtcRobotController\\build\\intermediates\\res\\merged\\debug\\raw\\warningmessage.wav",
+        "source": "C:\\Users\\Robotics\\Documents\\Robotics\\FtcRobotController\\build\\intermediates\\exploded-aar\\FtcCommon-release\\res\\raw\\warningmessage.wav"
     },
     {
-        "merged": "/home/robotics/Downloads/ftc_app-master/FtcRobotController/build/intermediates/res/merged/debug/raw/errormessage.wav",
-        "source": "/home/robotics/Downloads/ftc_app-master/FtcRobotController/build/intermediates/exploded-aar/FtcCommon-release/res/raw/errormessage.wav"
+        "merged": "C:\\home\\robotics\\Documents\\robotics\\C:\\Users\\Mark\\Documents\\8902-Robotics\\FtcRobotController\\build\\intermediates\\res\\merged\\debug\\raw\\song.wav",
+        "source": "C:\\home\\robotics\\Documents\\robotics\\C:\\Users\\Mark\\Documents\\8902-Robotics\\FtcRobotController\\src\\main\\res\\raw\\song.wav"
     },
     {
-        "merged": "/home/robotics/Downloads/ftc_app-master/FtcRobotController/build/intermediates/res/merged/debug/raw/warningmessage.wav",
-        "source": "/home/robotics/Downloads/ftc_app-master/FtcRobotController/build/intermediates/exploded-aar/FtcCommon-release/res/raw/warningmessage.wav"
+        "merged": "C:\\Users\\Robotics\\Documents\\Robotics\\FtcRobotController\\build\\intermediates\\res\\merged\\debug\\raw\\cube_mesh_vertex_shader.glsl",
+        "source": "C:\\Users\\Robotics\\Documents\\Robotics\\FtcRobotController\\build\\intermediates\\exploded-aar\\RobotCore-release\\res\\raw\\cube_mesh_vertex_shader.glsl"
+    },
+    {
+        "merged": "C:\\home\\robotics\\Documents\\robotics\\FtcRobotController\\build\\intermediates\\res\\merged\\debug\\raw\\texture_vertex_shader.glsl",
+        "source": "C:\\home\\robotics\\Documents\\robotics\\FtcRobotController\\build\\intermediates\\exploded-aar\\RobotCore-release\\res\\raw\\texture_vertex_shader.glsl"
+    },
+    {
+        "merged": "C:\\home\\robotics\\Documents\\robotics\\FtcRobotController\\build\\intermediates\\res\\merged\\debug\\raw\\cube_mesh_vertex_shader.glsl",
+        "source": "C:\\home\\robotics\\Documents\\robotics\\FtcRobotController\\build\\intermediates\\exploded-aar\\RobotCore-release\\res\\raw\\cube_mesh_vertex_shader.glsl"
+    },
+    {
+        "merged": "C:\\home\\robotics\\Documents\\robotics\\FtcRobotController\\build\\intermediates\\res\\merged\\debug\\raw\\errormessage.wav",
+        "source": "C:\\home\\robotics\\Documents\\robotics\\FtcRobotController\\build\\intermediates\\exploded-aar\\FtcCommon-release\\res\\raw\\errormessage.wav"
+    },
+    {
+        "merged": "C:\\Users\\Robotics\\Documents\\Robotics\\FtcRobotController\\build\\intermediates\\res\\merged\\debug\\raw\\guy.wav",
+        "source": "C:\\Users\\Robotics\\Documents\\Robotics\\FtcRobotController\\src\\main\\res\\raw\\guy.wav"
+    },
+    {
+        "merged": "C:\\home\\robotics\\Documents\\robotics\\C:\\Users\\Mark\\Documents\\8902-Robotics\\FtcRobotController\\build\\intermediates\\res\\merged\\debug\\raw\\warningmessage.wav",
+        "source": "C:\\home\\robotics\\Documents\\robotics\\C:\\Users\\Mark\\Documents\\8902-Robotics\\FtcRobotController\\build\\intermediates\\exploded-aar\\FtcCommon-release\\res\\raw\\warningmessage.wav"
+    },
+    {
+        "merged": "C:\\Users\\Robotics\\Documents\\Robotics\\FtcRobotController\\build\\intermediates\\res\\merged\\debug\\raw\\chimeconnect.wav",
+        "source": "C:\\Users\\Robotics\\Documents\\Robotics\\FtcRobotController\\build\\intermediates\\exploded-aar\\FtcCommon-release\\res\\raw\\chimeconnect.wav"
+    },
+    {
+        "merged": "C:\\home\\robotics\\Documents\\robotics\\FtcRobotController\\build\\intermediates\\res\\merged\\debug\\raw\\moan.wav",
+        "source": "C:\\home\\robotics\\Documents\\robotics\\FtcRobotController\\src\\main\\res\\raw\\moan.wav"
+    },
+    {
+        "merged": "C:\\home\\robotics\\Documents\\robotics\\C:\\Users\\Mark\\Documents\\8902-Robotics\\FtcRobotController\\build\\intermediates\\res\\merged\\debug\\raw\\simple_vertex_shader.glsl",
+        "source": "C:\\home\\robotics\\Documents\\robotics\\C:\\Users\\Mark\\Documents\\8902-Robotics\\FtcRobotController\\build\\intermediates\\exploded-aar\\RobotCore-release\\res\\raw\\simple_vertex_shader.glsl"
+    },
+    {
+        "merged": "C:\\home\\robotics\\Documents\\robotics\\C:\\Users\\Mark\\Documents\\8902-Robotics\\FtcRobotController\\build\\intermediates\\res\\merged\\debug\\raw\\chimeconnect.wav",
+        "source": "C:\\home\\robotics\\Documents\\robotics\\C:\\Users\\Mark\\Documents\\8902-Robotics\\FtcRobotController\\build\\intermediates\\exploded-aar\\FtcCommon-release\\res\\raw\\chimeconnect.wav"
+    },
+    {
+        "merged": "C:\\home\\robotics\\Documents\\robotics\\C:\\Users\\Mark\\Documents\\8902-Robotics\\FtcRobotController\\build\\intermediates\\res\\merged\\debug\\raw\\full.wav",
+        "source": "C:\\home\\robotics\\Documents\\robotics\\C:\\Users\\Mark\\Documents\\8902-Robotics\\FtcRobotController\\src\\main\\res\\raw\\full.wav"
+    },
+    {
+        "merged": "C:\\Users\\Robotics\\Documents\\Robotics\\FtcRobotController\\build\\intermediates\\res\\merged\\debug\\raw\\moan.wav",
+        "source": "C:\\Users\\Robotics\\Documents\\Robotics\\FtcRobotController\\src\\main\\res\\raw\\moan.wav"
+    },
+    {
+        "merged": "C:\\home\\robotics\\Documents\\robotics\\FtcRobotController\\build\\intermediates\\res\\merged\\debug\\raw\\color_fragment_shader.glsl",
+        "source": "C:\\home\\robotics\\Documents\\robotics\\FtcRobotController\\build\\intermediates\\exploded-aar\\RobotCore-release\\res\\raw\\color_fragment_shader.glsl"
+    },
+    {
+        "merged": "C:\\home\\robotics\\Documents\\robotics\\C:\\Users\\Mark\\Documents\\8902-Robotics\\FtcRobotController\\build\\intermediates\\res\\merged\\debug\\raw\\nxtstartupsound.wav",
+        "source": "C:\\home\\robotics\\Documents\\robotics\\C:\\Users\\Mark\\Documents\\8902-Robotics\\FtcRobotController\\build\\intermediates\\exploded-aar\\FtcCommon-release\\res\\raw\\nxtstartupsound.wav"
+    },
+    {
+        "merged": "C:\\home\\robotics\\Documents\\robotics\\C:\\Users\\Mark\\Documents\\8902-Robotics\\FtcRobotController\\build\\intermediates\\res\\merged\\debug\\raw\\errormessage.wav",
+        "source": "C:\\home\\robotics\\Documents\\robotics\\C:\\Users\\Mark\\Documents\\8902-Robotics\\FtcRobotController\\build\\intermediates\\exploded-aar\\FtcCommon-release\\res\\raw\\errormessage.wav"
+    },
+    {
+        "merged": "C:\\home\\robotics\\Documents\\robotics\\C:\\Users\\Mark\\Documents\\8902-Robotics\\FtcRobotController\\build\\intermediates\\res\\merged\\debug\\raw\\cube_mesh_fragment_shader.glsl",
+        "source": "C:\\home\\robotics\\Documents\\robotics\\C:\\Users\\Mark\\Documents\\8902-Robotics\\FtcRobotController\\build\\intermediates\\exploded-aar\\RobotCore-release\\res\\raw\\cube_mesh_fragment_shader.glsl"
+    },
+    {
+        "merged": "C:\\Users\\Robotics\\Documents\\Robotics\\FtcRobotController\\build\\intermediates\\res\\merged\\debug\\raw\\texture_vertex_shader.glsl",
+        "source": "C:\\Users\\Robotics\\Documents\\Robotics\\FtcRobotController\\build\\intermediates\\exploded-aar\\RobotCore-release\\res\\raw\\texture_vertex_shader.glsl"
+    },
+    {
+        "merged": "C:\\home\\robotics\\Documents\\robotics\\FtcRobotController\\build\\intermediates\\res\\merged\\debug\\raw\\chimedisconnect.wav",
+        "source": "C:\\home\\robotics\\Documents\\robotics\\FtcRobotController\\build\\intermediates\\exploded-aar\\FtcCommon-release\\res\\raw\\chimedisconnect.wav"
+    },
+    {
+        "merged": "C:\\home\\robotics\\Documents\\robotics\\C:\\Users\\Mark\\Documents\\8902-Robotics\\FtcRobotController\\build\\intermediates\\res\\merged\\debug\\raw\\texture_vertex_shader.glsl",
+        "source": "C:\\home\\robotics\\Documents\\robotics\\C:\\Users\\Mark\\Documents\\8902-Robotics\\FtcRobotController\\build\\intermediates\\exploded-aar\\RobotCore-release\\res\\raw\\texture_vertex_shader.glsl"
+    },
+    {
+        "merged": "C:\\home\\robotics\\Documents\\robotics\\FtcRobotController\\build\\intermediates\\res\\merged\\debug\\raw\\chimeconnect.wav",
+        "source": "C:\\home\\robotics\\Documents\\robotics\\FtcRobotController\\build\\intermediates\\exploded-aar\\FtcCommon-release\\res\\raw\\chimeconnect.wav"
+    },
+    {
+        "merged": "C:\\Users\\Robotics\\Documents\\Robotics\\FtcRobotController\\build\\intermediates\\res\\merged\\debug\\raw\\cube_mesh_fragment_shader.glsl",
+        "source": "C:\\Users\\Robotics\\Documents\\Robotics\\FtcRobotController\\build\\intermediates\\exploded-aar\\RobotCore-release\\res\\raw\\cube_mesh_fragment_shader.glsl"
+    },
+    {
+        "merged": "C:\\Users\\Robotics\\Documents\\Robotics\\FtcRobotController\\build\\intermediates\\res\\merged\\debug\\raw\\errormessage.wav",
+        "source": "C:\\Users\\Robotics\\Documents\\Robotics\\FtcRobotController\\build\\intermediates\\exploded-aar\\FtcCommon-release\\res\\raw\\errormessage.wav"
+    },
+    {
+        "merged": "C:\\Users\\Robotics\\Documents\\Robotics\\FtcRobotController\\build\\intermediates\\res\\merged\\debug\\raw\\chimedisconnect.wav",
+        "source": "C:\\Users\\Robotics\\Documents\\Robotics\\FtcRobotController\\build\\intermediates\\exploded-aar\\FtcCommon-release\\res\\raw\\chimedisconnect.wav"
+    },
+    {
+        "merged": "C:\\home\\robotics\\Documents\\robotics\\FtcRobotController\\build\\intermediates\\res\\merged\\debug\\raw\\texture_fragment_shader.glsl",
+        "source": "C:\\home\\robotics\\Documents\\robotics\\FtcRobotController\\build\\intermediates\\exploded-aar\\RobotCore-release\\res\\raw\\texture_fragment_shader.glsl"
+    },
+    {
+        "merged": "C:\\Users\\Robotics\\Documents\\Robotics\\FtcRobotController\\build\\intermediates\\res\\merged\\debug\\raw\\texture_fragment_shader.glsl",
+        "source": "C:\\Users\\Robotics\\Documents\\Robotics\\FtcRobotController\\build\\intermediates\\exploded-aar\\RobotCore-release\\res\\raw\\texture_fragment_shader.glsl"
+    },
+    {
+        "merged": "C:\\home\\robotics\\Documents\\robotics\\FtcRobotController\\build\\intermediates\\res\\merged\\debug\\raw\\cube_mesh_fragment_shader.glsl",
+        "source": "C:\\home\\robotics\\Documents\\robotics\\FtcRobotController\\build\\intermediates\\exploded-aar\\RobotCore-release\\res\\raw\\cube_mesh_fragment_shader.glsl"
+    },
+    {
+        "merged": "C:\\Users\\Robotics\\Documents\\Robotics\\FtcRobotController\\build\\intermediates\\res\\merged\\debug\\raw\\song.wav",
+        "source": "C:\\Users\\Robotics\\Documents\\Robotics\\FtcRobotController\\src\\main\\res\\raw\\song.wav"
+    },
+    {
+        "merged": "C:\\home\\robotics\\Documents\\robotics\\C:\\Users\\Mark\\Documents\\8902-Robotics\\FtcRobotController\\build\\intermediates\\res\\merged\\debug\\raw\\texture_fragment_shader.glsl",
+        "source": "C:\\home\\robotics\\Documents\\robotics\\C:\\Users\\Mark\\Documents\\8902-Robotics\\FtcRobotController\\build\\intermediates\\exploded-aar\\RobotCore-release\\res\\raw\\texture_fragment_shader.glsl"
+    },
+    {
+        "merged": "C:\\Users\\Robotics\\Documents\\Robotics\\FtcRobotController\\build\\intermediates\\res\\merged\\debug\\raw\\full.wav",
+        "source": "C:\\Users\\Robotics\\Documents\\Robotics\\FtcRobotController\\src\\main\\res\\raw\\full.wav"
+    },
+    {
+        "merged": "C:\\home\\robotics\\Documents\\robotics\\FtcRobotController\\build\\intermediates\\res\\merged\\debug\\raw\\song.wav",
+        "source": "C:\\home\\robotics\\Documents\\robotics\\FtcRobotController\\src\\main\\res\\raw\\song.wav"
+    },
+    {
+        "merged": "C:\\home\\robotics\\Documents\\robotics\\FtcRobotController\\build\\intermediates\\res\\merged\\debug\\raw\\full.wav",
+        "source": "C:\\home\\robotics\\Documents\\robotics\\FtcRobotController\\src\\main\\res\\raw\\full.wav"
+    },
+    {
+        "merged": "C:\\home\\robotics\\Documents\\robotics\\C:\\Users\\Mark\\Documents\\8902-Robotics\\FtcRobotController\\build\\intermediates\\res\\merged\\debug\\raw\\color_fragment_shader.glsl",
+        "source": "C:\\home\\robotics\\Documents\\robotics\\C:\\Users\\Mark\\Documents\\8902-Robotics\\FtcRobotController\\build\\intermediates\\exploded-aar\\RobotCore-release\\res\\raw\\color_fragment_shader.glsl"
+    },
+    {
+        "merged": "C:\\home\\robotics\\Documents\\robotics\\C:\\Users\\Mark\\Documents\\8902-Robotics\\FtcRobotController\\build\\intermediates\\res\\merged\\debug\\raw\\chimedisconnect.wav",
+        "source": "C:\\home\\robotics\\Documents\\robotics\\C:\\Users\\Mark\\Documents\\8902-Robotics\\FtcRobotController\\build\\intermediates\\exploded-aar\\FtcCommon-release\\res\\raw\\chimedisconnect.wav"
+    },
+    {
+        "merged": "C:\\Users\\Robotics\\Documents\\Robotics\\FtcRobotController\\build\\intermediates\\res\\merged\\debug\\raw\\color_fragment_shader.glsl",
+        "source": "C:\\Users\\Robotics\\Documents\\Robotics\\FtcRobotController\\build\\intermediates\\exploded-aar\\RobotCore-release\\res\\raw\\color_fragment_shader.glsl"
+    },
+    {
+        "merged": "C:\\home\\robotics\\Documents\\robotics\\C:\\Users\\Mark\\Documents\\8902-Robotics\\FtcRobotController\\build\\intermediates\\res\\merged\\debug\\raw\\moan.wav",
+        "source": "C:\\home\\robotics\\Documents\\robotics\\C:\\Users\\Mark\\Documents\\8902-Robotics\\FtcRobotController\\src\\main\\res\\raw\\moan.wav"
     }
 ]
